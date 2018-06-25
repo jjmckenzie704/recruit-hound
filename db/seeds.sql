@@ -1,0 +1,1 @@
+INSERT INTO users (firstName, lastName, email, skill) VALUES ('Ryan', 'Diaz', 'ryandiaz@gmail.com', 'JavaScript')
