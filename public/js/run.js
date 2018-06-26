@@ -1,4 +1,26 @@
-$(document).ready(function() {
+$( document ).ready(function() {
+
+
+    console.log( "ready!" );
+    
+
+
+
+$(function() {
+    //caches a jQuery object containing the header element
+    let wrap = $(".wrap");
+    $(window).scroll(function() {
+        let scroll = $(window).scrollTop();
+
+        if (scroll >= 100) {
+            console.log(" if - red")
+            wrap.removeClass('fix-search-blue').addClass("fix-search-red");
+        } else {
+            console.log(" else - blue")
+            wrap.removeClass("fix-search-red").addClass('fix-search-blue');
+        }
+    });
+});
 
 $.get("/api/users", function(data) {
     console.log(data);
@@ -23,8 +45,6 @@ function createNewRow(user) {
 
     return $newUserRow;
 }
-
-
 
 
 });

@@ -1,0 +1,213 @@
+.fix-search-blue {
+    background: linear-gradient(to top, rgba(34, 30, 30, 0), rgb(43, 99, 71)) ;
+    height: 100px;
+    border-bottom: 2px solid grey;
+    -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+    -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+    transition: background-color 0.5s ease-out, height 0.5s ease-out;
+}
+
+.fix-search-red {
+    background-color: rgb(43, 99, 71);
+    height: 50px;
+    -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+    -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+    transition: background-color 0.5s ease-out, height 0.5s ease-out;
+}
+
+.parallax-1 {
+    /* background-image: url("../images/background2.jpg"); */
+    height: 75vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: block;
+}
+
+.parallax-2 {
+    background-image: url("../images/background2.jpg"); 
+    height: 75vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: block;
+}
+
+
+.ptext .border {
+    background-color: rgb(17, 17, 17);
+    color: #fff;
+    padding: 20px;
+}
+
+.ptext {
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+/* Tou Can image manipulate here */
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Sedgwick+Ave+Display');
+:root {
+    --font-display: 'Sedgwick Ave Display';
+    --font-sans-serif: 'Lato';
+    --box-shadow: 0px 21px 32px 0px rgba(8, 40, 34);
+    --color-bg: #0d3029;
+    --grad-bright: linear-gradient(-55deg, #8fc2c9 0%, #bee0e5 100%);
+    --grad-dark: linear-gradient(-55deg, #248391 0%, #8fc2c9 100%);
+    --fig-width: 380px;
+    --fig-height: 255px;
+    --delay-base: 500ms;
+    --delay-added: 100ms;
+    --acc-back: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  }
+  
+  *:before,
+*:after{
+  box-sizing:border-box;
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+  .toucan {
+    width: 100%;
+    height: auto;
+    border-radius: 2px 34px;
+    box-shadow: var(--box-shadow);
+    animation: popInImg 700ms var(--acc-back) 1 
+    forwards;
+    animation-delay: var(--delay-base);
+    opacity: 0;
+    transform: skewY(1deg);
+  }
+  
+  .figure {
+    position: relative;
+    width: var(--fig-width);
+    height: var(--fig-height);
+    transition: transform 600ms var(--acc-back);
+  }
+  
+  .figure:hover{
+    transform: scale(1.05) skewY(-1deg);
+  }
+  
+  .figcaption{
+    transition: transform 600ms var(--acc-back), opacity 100ms ease-in;
+    height: inherit;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+  }
+  
+  .figure:hover .figcaption{
+    opacity: 0;
+    transform: scale(.91);
+  }
+  
+  @keyframes popInImg{
+    0%{
+      transform: skewY(5deg) scaleX(.89) scaleY(.89);
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;    
+    }
+  }
+  
+  .figcaption span{
+    position: absolute;
+    display: block;
+    background: var(--grad-bright);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: var(--font-sans-serif);
+    transform: skewY(-13deg);
+    text-shadow: var(--box-shadow);
+    animation: popIn 600ms var(--acc-back) 1 forwards;
+    opacity: 0;
+  }
+  
+  @keyframes popIn{
+    0%,13%{
+      transform: scaleX(.89) scaleY(.75);
+      opacity: 0;
+    }
+    100%{
+      transform: skewY(-13deg);
+      opacity: 1;    
+    }
+  }
+  
+  .figcaption span:nth-of-type(1){
+    top: -44px; left: 44px;
+    font-size: 21px;
+    animation-delay: calc(var(--delay-base) + 1 * var(--delay-added));
+  }
+  
+  .figcaption span:nth-of-type(2){
+    top: -34px; left: -21px;
+    font-size: 89px;
+    font-family: var(--font-display);
+    animation-delay: calc(var(--delay-base) + 2 * var(--delay-added));
+  }
+  
+  .figcaption span:nth-of-type(3){
+    bottom: -38px; right: -21px;
+    font-size: 89px;
+    font-family: var(--font-display);
+    animation-delay: calc(var(--delay-base) + 3 * var(--delay-added));
+  }
+  
+  .figcaption span:nth-of-type(4){
+    bottom: -50px; right: -21px;
+    font-size: 21px;
+    animation-delay: calc(var(--delay-base) + 4 * var(--delay-added)); 
+  }
+  
+  @media screen and (max-width: 539px){
+    .figure{
+      max-width: var(--fig-width);
+      max-height: var(--fig-height);
+      width: auto;
+      height: auto;
+    }
+    
+    .figcaption span:nth-of-type(1),
+    .figcaption span:nth-of-type(4){
+      font-size: 14px;
+    }
+    
+    .figcaption span:nth-of-type(2),
+    .figcaption span:nth-of-type(3){
+      font-size: 70px;
+    }
+    
+    .figcaption span:nth-of-type(4){
+      bottom: -44px;
+    }
+  }
+/* Tou Can image manipulate end here */
+
+.footer {
+    height: 10vh;
+}
