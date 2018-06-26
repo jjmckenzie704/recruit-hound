@@ -1,4 +1,6 @@
-$( document ).ready(function() {
+var $j = jQuery.noConflict();
+
+$j( document ).ready(function() {
 
 
     console.log( "ready!" );
@@ -6,11 +8,11 @@ $( document ).ready(function() {
 
 
 
-$(function() {
+$j(function() {
     //caches a jQuery object containing the header element
-    let wrap = $(".wrap");
-    $(window).scroll(function() {
-        let scroll = $(window).scrollTop();
+    let wrap = $j(".wrap");
+    $j(window).scroll(function() {
+        let scroll = $j(window).scrollTop();
 
         if (scroll >= 100) {
             console.log(" if - red")
@@ -22,17 +24,18 @@ $(function() {
     });
 });
 
-$.get("/api/users", function(data) {
+console.log("Begin $j.get");
+$j.get("/api/users", function(data) {
     console.log(data);
     for (key in data) {
         createNewRow(data[key]);
     }
-    $('.content').html(createNewRow(data[key]));
+    $j('.content').html(createNewRow(data[key]));
 });
 
 function createNewRow(user) {
     console.log("success");
-    let $newUserRow = $(
+    let $newUserRow = $j(
         [
             '<p class="user-block">',
             'First Name: ' + user.firstName + '<br />',
