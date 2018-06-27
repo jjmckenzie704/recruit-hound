@@ -58,9 +58,9 @@ module.exports = function(sequelize, DataTypes) {
         }
       },
       national: {
-        type: DataTypes.STRING,
+        type: DataTypes.BOOLEAN,
         allowNull: false,
-        defaultValue: true,
+        defaultValue: 1,
         validate: {
           notNull: true
         }
