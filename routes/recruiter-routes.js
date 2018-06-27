@@ -10,15 +10,21 @@ var db = require("../models");
 module.exports = function(app) {
 
   // GET route for display all
-  app.get("/api/users", function(req, res) {
-    db.User.findAll({}).then(function(results) {
+  app.get("/api/recruiterAgencies", function(req, res) {
+    db.recruiterAgency.findAll({}).then(function(results) {
       res.json(results)
     })
   });
 
   // Get route for retrieving a single piece of data
-  app.get("/api/posts/:id", function(req, res) {
-   
+  app.get("/api/recruiterAgencies/city1/:city", function(req, res) {
+    db.recruiterAgency.findAll({
+      where: {
+        city1: req.params.city
+      }
+    }).then(function(results) {
+      res.json(results)
+    })
   });
 
   // POST route for saving a new piece of data
