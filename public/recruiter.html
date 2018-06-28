@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8" />
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <link rel="icon" href="./images/icon.png">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!-- Local styling -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    
+       
+    <title>Recruit Hound - Login</title>
+</head>
+<body>
+
+<!-- Begin login form -->
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Recruiter Agency</th>
+        <th scope="col">Address</th>
+        <th scope="col">Suite</th>
+        <th scope="col">City</th>
+        <th scope="col">State</th>
+        <th scope="col">Zip</th>
+        <th scope="col">Phone</th>
+        <th scope="col">e-mail</th>
+        <th scope="col">website</th>
+        <th scope="col">description</th>
+      </tr>
+    </thead>
+  </table>
+
+<script>
+  var recruiterList = $("tbody");
+
+  function createRecruiterRow(recruiterData) {
+    var newTr = $("<tr>");
+    newTr.data("recruiter", recruiterData);
+    newTr.append("<td>" + recruiterData.recruiting_agency + "</td>");
+    newTr.append("<td>" + recruiterData.street_addres1);
+    newTr.append("<td>" + recruiterData.unit1 + "</td>");
+    newTr.append("<td>" + recruiterData.city1 + "</td>");
+    newTr.append("<td>" + recruiterData.state1 + "</td>");
+    newTr.append("<td>" + recruiterData.zip_code1 + "</td>");
+    newTr.append("<td>" + recruiterData.number1 + "</td>");
+    newTr.append("<td>" + recruiterData.email + "</td>");
+      newTr.append("<td>" + recruiterData.description + "</td>");
+  };
+
+  function getRecruiters() {
+    $.get("/api/recruiterAgencies", function(data) {
+      var addRows = [];
+      for (var i = 0; i < data.length; i++) {
+        addRows.push(createRecruiterRow(data[i]));
+      };
+      renderRecruiterList(addRows);
+      nameInput.val("");
+    })
+  }
+
+  getRecruiters();
+
+  /*function renderRecruiterList(rows) {
+    recruiterList.children().no
+  }*/
+</script>
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
