@@ -17,10 +17,10 @@ module.exports = function(app) {
   });
 
   // Get route for retrieving a single piece of data
-  app.get("/api/recruiterAgencies/city1/:city", function(req, res) {
+  app.get("/api/recruiterAgencies/city/:city1", function(req, res) {
     db.recruiterAgency.findAll({
       where: {
-        city1: req.params.city
+        city: req.params.city1
       }
     }).then(function(results) {
       res.json(results)
