@@ -27,19 +27,19 @@ module.exports = function(app) {
     })
   });
 
-  // POST route for saving a new piece of data
-  app.post("/api/posts", function(req, res) {
+  // POST route for saving a new piece of data - PROJECT 3
+  /*app.post("/api/posts", function(req, res) {
     
   });
 
-  // DELETE route for deleting a piece of data
+  // DELETE route for deleting a piece of data - PROJECT 3
   app.delete("/api/posts/:id", function(req, res) {
     
   });
 
-  // PUT route for updating a piece of data
+  // PUT route for updating a piece of data - PROJECT 3
   app.put("/api/posts", function(req, res) {
    
-  });
+  });*/
 
 };
