@@ -17,7 +17,7 @@ var flash    = require('connect-flash');
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 8080;
-require('./config/passport')(passport); // pass passport for configuration
+
 
 // Requiring our models for syncing
 var db = require("./models");
