@@ -11,7 +11,7 @@ module.exports = function(app) {
 
   // GET route for display all
   app.get("/api/users", function(req, res) {
-    db.User.findAll({}).then(function(results) {
+    db.user.findAll({}).then(function(results) {
       res.json(results)
     })
   });
