@@ -50,7 +50,7 @@ app.use(express.static("public"));
 
 // Routes
 // =============================================================
-require("./routes/api-routes.js")(app);
+require("./routes/user-routes.js")(app);
 require("./routes/html-routes.js")(app);
 require("./routes/recruiter-routes.js")(app);
 var authRoute = require('./routes/passport-routes.js')(app, passport);
