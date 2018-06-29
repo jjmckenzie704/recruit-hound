@@ -12,11 +12,17 @@ var cookieParser = require('cookie-parser');
 var morgan = require('morgan');
 var passport = require('passport');
 var flash    = require('connect-flash');
+var exphbs = require('express-handlebars')
 
 // Sets up the Express App
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 8080;
+
+//For Handlebars
+app.set('views', './views')
+app.engine('handlebars', exphbs({ extname: '.handlebars' }));
+app.set('view engine', 'handlebars');
 
 
 // Requiring our models for syncing
@@ -27,7 +33,7 @@ app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
 app.use(bodyParser.urlencoded({ extended: true }));  // parse application/x-www-form-urlencoded
 app.use(bodyParser.json());  // parse application/json
-app.set('view engine', 'ejs'); // set up ejs for templating
+//app.set('view engine', 'ejs'); // set up ejs for templating
 
 // Required for passport
 app.use(session({
@@ -47,11 +53,15 @@ app.use(express.static("public"));
 require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 require("./routes/recruiter-routes.js")(app);
-require('./routes/passport-routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
+var authRoute = require('./routes/passport-routes.js')(app, passport);
+
+//load passport strategies
+require('./config/passport/passport.js')(passport, db.user);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 db.sequelize.sync({ force: false }).then(function() {
+  console.log('Database connected')
   app.listen(PORT, function() {
     console.log("App listening on: http://localhost:" + PORT);
   });
