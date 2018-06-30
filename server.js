@@ -12,7 +12,8 @@ var cookieParser = require('cookie-parser');
 var morgan = require('morgan');
 var passport = require('passport');
 var flash    = require('connect-flash');
-var exphbs = require('express-handlebars')
+var exphbs = require('express-handlebars');
+var sendmail = require('sendmail')
 
 // Sets up the Express App
 // =============================================================
@@ -57,6 +58,8 @@ var authRoute = require('./routes/passport-routes.js')(app, passport);
 
 //load passport strategies
 require('./config/passport/passport.js')(passport, db.user);
+
+//for sendmail
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
