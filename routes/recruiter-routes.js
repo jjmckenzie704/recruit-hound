@@ -29,7 +29,7 @@ module.exports = function(app) {
   });
 
   // POST route for posting a recruiters contact form for new information
-  app.post("/api/recruiter_contacts", function(req, res) {
+  app.post("/api/recruiterContacts", function(req, res) {
     console.log(req.params)
     db.main.create(req.params).then(function(dbPost){
       res.json(dbPost)
