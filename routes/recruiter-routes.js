@@ -28,12 +28,15 @@ module.exports = function(app) {
     })
   });
 
-  // POST route for saving a new piece of data - PROJECT 3
-  /*app.post("/api/posts", function(req, res) {
-    
+  // POST route for posting a recruiters contact form for new information
+  app.post("/api/recruiter_contacts", function(req, res) {
+    console.log(req.params)
+    db.main.create(req.params).then(function(dbPost){
+      res.json(dbPost)
+    })
   });
 
-  // DELETE route for deleting a piece of data - PROJECT 3
+  /*// DELETE route for deleting a piece of data - PROJECT 3
   app.delete("/api/posts/:id", function(req, res) {
     
   });
