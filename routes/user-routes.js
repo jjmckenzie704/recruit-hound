@@ -23,8 +23,8 @@ module.exports = function(app) {
 
   // POST route for saving information when a new user requests information
   app.post("/api/userContacts", function(req, res) {
-    console.log(req.params)
-    db.main.create(req.params).then(function(dbPost){
+    console.log(req.body)
+    db.userContact.create(req.body).then(function(dbPost){
       res.json(dbPost)
     })
   });
