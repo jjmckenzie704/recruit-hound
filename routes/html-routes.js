@@ -19,9 +19,14 @@ module.exports = function(app) {
   app.get("/recruiter", function(req, res){
     res.sendFile(path.join(__dirname, "../public/recruiter.html"))
   })
+
   app.get("/recruitersearch", function(req, res){
     res.sendFile(path.join(__dirname, "../public/recruitersearch.html"))
   })
+
+  app.get('/contactus', function(req, res) {
+    res.render('contactus');
+  });
 
 
 
