@@ -1,3 +1,6 @@
+$(document).ready(function() {
+
+
 //================================//
 //Below this line is the code for pushing recruiter information to the recruiter_contact table
 $("#showContactModal").on("click", function () {
@@ -48,3 +51,5 @@ $("#recruitercontact").on("click", function() {
 });
 
 
+
+})
