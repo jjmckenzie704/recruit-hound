@@ -30,8 +30,8 @@ module.exports = function(app) {
 
   // POST route for posting a recruiters contact form for new information
   app.post("/api/recruiterContacts", function(req, res) {
-    console.log(req.params)
-    db.main.create(req.params).then(function(dbPost){
+    console.log(req.body)
+    db.recruiterContact.create(req.body).then(function(dbPost){
       res.json(dbPost)
     })
   });
