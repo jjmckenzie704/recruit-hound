@@ -1,213 +1,406 @@
+/* BEGIN HEADER CSS */
 .fix-search-blue {
-    background: linear-gradient(to top, rgba(34, 30, 30, 0), rgb(43, 99, 71)) ;
-    height: 100px;
-    border-bottom: 2px solid grey;
-    -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
-    -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
-    -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
-    transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  /* background: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(0, 0, 0)) ; */
+  height: 100px;
+  
+  -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  transition: background-color 0.5s ease-out, height 0.5s ease-out;
 }
 
 .fix-search-red {
-    background-color: rgb(43, 99, 71);
-    height: 50px;
-    -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
-    -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
-    -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
-    transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  /* background-color: rgb(0, 0, 0); */
+  border-bottom: 2px solid grey;
+  height: 50px;
+  -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  transition: background-color 0.5s ease-out, height 0.5s ease-out;
+}
+/* END HEADER CSS */
+
+/* BEGIN LEFT SIDE CSS LANDING PAGE */
+.leftSide {
+position: absolute;
+bottom: 0;
+top: 0;
+left: 0;
+background-color: rgb(53, 255, 0)
 }
 
-.parallax-1 {
-    /* background-image: url("../images/background2.jpg"); */
-    height: 75vh;
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: block;
-}
-
-.parallax-2 {
-    background-image: url("../images/background2.jpg"); 
-    height: 75vh;
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: block;
+.logoLocation {
+position: absolute;
+width: 70%;
+height: auto;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+-moz-transform: translate(-50%, -50%);
+-o-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
 }
 
 
+.shadowed {
+filter : drop-shadow(0 0 2px #000);
+}
+/* END LEFT SIDE CSS LANDING PAGE */
+
+/* BEGIN RIGHT SIDE CSS LANDING PAGE */
+
+.signUp-signIn-location {
+position: absolute;
+width: 300px;
+height: 300px;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+-moz-transform: translate(-50%, -50%);
+-o-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+font: 14px/1.21 Roboto, 'Helvetica Neue', arial, helvetica, sans-serif;
+border-radius: 5px;
+margin: 20px;
+padding: 20px;
+background: #FFF;
+}
+
+.loadingPage-Logo {
+width: 100%;
+height: 100%;
+}
+
+.rightSide {
+position: absolute;
+bottom: 0;
+top: 0;
+right: 0;
+background-color: rgb(255, 200, 0)
+}
+
+.submit-btn {
+background-color: rgb(53, 255, 0);
+}
+
+
+.button {
+display: inline-block;
+font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+-webkit-font-smoothing: antialiased;
+position: relative;
+padding: .8em 1.4em;
+padding-right: 4.7em;
+background: #009ED8;
+border: none;
+color: white;
+transition: .2s;
+}
+.button:before,
+.button:after {
+position: absolute;
+top: 0;
+bottom: 0;
+right: 0;
+padding-top: inherit;
+padding-bottom: inherit;
+width: 2.8em;
+content: "\00a0";
+font-family: 'FontAwesome', sans-serif;
+font-size: 1.2em;
+text-align: center;
+transition: .2s;
+transform-origin: 50% 60%;
+}
+.button:before {
+background: rgba(0, 0, 0, 0.1);
+}
+.button:hover {
+background: #0079a5;
+}
+.button:active,
+.button:focus {
+background: #002e3f;
+outline: none;
+}
+.button {
+min-width: 15em;
+}
+.arrow {
+background: #FE5F55;
+}
+.arrow:hover {
+background: #fe2f22;
+}
+.arrow:active,
+.arrow:focus {
+background: #b90c01;
+}
+.arrow:after {
+content: "\F054";
+}
+.arrow:hover:after {
+-webkit-animation: bounceright .3s alternate ease infinite;
+animation: bounceright .3s alternate ease infinite;
+}
+@-webkit-keyframes bounceright {
+from {
+  -webkit-transform: translateX(0);
+}
+to {
+  -webkit-transform: translateX(3px);
+}
+}
+@keyframes bounceright {
+from {
+  transform: translateX(0);
+}
+to {
+  transform: translateX(3px);
+}
+}
+
+/* END RIGHT SIDE CSS LANDING PAGE */
+
+/* BEGIN FOOTER CSS */
+
+.hdr-links {
+color: orangered;
+}
+
+.footer-font {
+color: yellow;
+}
+
+
+.footer {
+position: fixed;
+bottom: 0px;
+bottom: 0;
+width: 100%;
+height: 50px;
+background-color: black;
+}
+
+/* END FOOTER CSS */
+
+/* 
+html, body {
+
+
+}
+form {
+
+} */
+
+
+
+
+/* 
 .ptext .border {
-    background-color: rgb(17, 17, 17);
-    color: #fff;
-    padding: 20px;
+  background-color: rgb(17, 17, 17);
+  color: #fff;
+  padding: 20px;
 }
 
 .ptext {
-    text-align: center;
-    color: #000;
-    font-size: 27px;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-    position: absolute;
-    top: 50%;
-    width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  width: 100%;
 }
 
 .section {
-    text-align: center;
-    padding: 50px 80px;
-    background-color: #f4f4f4;
-    color: #666;
+  text-align: center;
+  padding: 50px 80px;
+  background-color: #f4f4f4;
+  color: #666;
 }
 
-/* Tou Can image manipulate here */
+/* Tou Can image manipulate here 
 
 @import url('https://fonts.googleapis.com/css?family=Lato|Sedgwick+Ave+Display');
 :root {
-    --font-display: 'Sedgwick Ave Display';
-    --font-sans-serif: 'Lato';
-    --box-shadow: 0px 21px 32px 0px rgba(8, 40, 34);
-    --color-bg: #0d3029;
-    --grad-bright: linear-gradient(-55deg, #8fc2c9 0%, #bee0e5 100%);
-    --grad-dark: linear-gradient(-55deg, #248391 0%, #8fc2c9 100%);
-    --fig-width: 380px;
-    --fig-height: 255px;
-    --delay-base: 500ms;
-    --delay-added: 100ms;
-    --acc-back: cubic-bezier(0.175, 0.885, 0.320, 1.275);
-  }
-  
-  *:before,
-*:after{
-  box-sizing:border-box;
-  -webkit-tap-highlight-color: rgba(255,255,255,0);
+  --font-display: 'Sedgwick Ave Display';
+  --font-sans-serif: 'Lato';
+  --box-shadow: 0px 21px 32px 0px rgba(8, 40, 34);
+  --color-bg: #0d3029;
+  --grad-bright: linear-gradient(-55deg, #8fc2c9 0%, #bee0e5 100%);
+  --grad-dark: linear-gradient(-55deg, #248391 0%, #8fc2c9 100%);
+  --fig-width: 380px;
+  --fig-height: 255px;
+  --delay-base: 500ms;
+  --delay-added: 100ms;
+  --acc-back: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
-  .toucan {
-    width: 100%;
-    height: auto;
-    border-radius: 2px 34px;
-    box-shadow: var(--box-shadow);
-    animation: popInImg 700ms var(--acc-back) 1 
-    forwards;
-    animation-delay: var(--delay-base);
+
+*:before,
+*:after{
+box-sizing:border-box;
+-webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+.toucan {
+  width: 100%;
+  height: auto;
+  border-radius: 2px 34px;
+  box-shadow: var(--box-shadow);
+  animation: popInImg 700ms var(--acc-back) 1 
+  forwards;
+  animation-delay: var(--delay-base);
+  opacity: 0;
+  transform: skewY(1deg);
+}
+
+.figure {
+  position: relative;
+  width: var(--fig-width);
+  height: var(--fig-height);
+  transition: transform 600ms var(--acc-back);
+}
+
+.figure:hover{
+  transform: scale(1.05) skewY(-1deg);
+}
+
+.figcaption{
+  transition: transform 600ms var(--acc-back), opacity 100ms ease-in;
+  height: inherit;
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+}
+
+.figure:hover .figcaption{
+  opacity: 0;
+  transform: scale(.91);
+}
+
+@keyframes popInImg{
+  0%{
+    transform: skewY(5deg) scaleX(.89) scaleY(.89);
     opacity: 0;
-    transform: skewY(1deg);
   }
-  
-  .figure {
-    position: relative;
-    width: var(--fig-width);
-    height: var(--fig-height);
-    transition: transform 600ms var(--acc-back);
+  100%{
+    opacity: 1;    
   }
-  
-  .figure:hover{
-    transform: scale(1.05) skewY(-1deg);
-  }
-  
-  .figcaption{
-    transition: transform 600ms var(--acc-back), opacity 100ms ease-in;
-    height: inherit;
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100%; 
-    height: 100%;
-  }
-  
-  .figure:hover .figcaption{
+}
+
+.figcaption span{
+  position: absolute;
+  display: block;
+  background: var(--grad-bright);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--font-sans-serif);
+  transform: skewY(-13deg);
+  text-shadow: var(--box-shadow);
+  animation: popIn 600ms var(--acc-back) 1 forwards;
+  opacity: 0;
+}
+
+@keyframes popIn{
+  0%,13%{
+    transform: scaleX(.89) scaleY(.75);
     opacity: 0;
-    transform: scale(.91);
   }
-  
-  @keyframes popInImg{
-    0%{
-      transform: skewY(5deg) scaleX(.89) scaleY(.89);
-      opacity: 0;
-    }
-    100%{
-      opacity: 1;    
-    }
-  }
-  
-  .figcaption span{
-    position: absolute;
-    display: block;
-    background: var(--grad-bright);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: var(--font-sans-serif);
+  100%{
     transform: skewY(-13deg);
-    text-shadow: var(--box-shadow);
-    animation: popIn 600ms var(--acc-back) 1 forwards;
-    opacity: 0;
+    opacity: 1;    
+  }
+}
+
+.figcaption span:nth-of-type(1){
+  top: -44px; left: 44px;
+  font-size: 21px;
+  animation-delay: calc(var(--delay-base) + 1 * var(--delay-added));
+}
+
+.figcaption span:nth-of-type(2){
+  top: -34px; left: -21px;
+  font-size: 89px;
+  font-family: var(--font-display);
+  animation-delay: calc(var(--delay-base) + 2 * var(--delay-added));
+}
+
+.figcaption span:nth-of-type(3){
+  bottom: -38px; right: -21px;
+  font-size: 89px;
+  font-family: var(--font-display);
+  animation-delay: calc(var(--delay-base) + 3 * var(--delay-added));
+}
+
+.figcaption span:nth-of-type(4){
+  bottom: -50px; right: -21px;
+  font-size: 21px;
+  animation-delay: calc(var(--delay-base) + 4 * var(--delay-added)); 
+}
+
+@media screen and (max-width: 539px){
+  .figure{
+    max-width: var(--fig-width);
+    max-height: var(--fig-height);
+    width: auto;
+    height: auto;
   }
   
-  @keyframes popIn{
-    0%,13%{
-      transform: scaleX(.89) scaleY(.75);
-      opacity: 0;
-    }
-    100%{
-      transform: skewY(-13deg);
-      opacity: 1;    
-    }
+  .figcaption span:nth-of-type(1),
+  .figcaption span:nth-of-type(4){
+    font-size: 14px;
   }
   
-  .figcaption span:nth-of-type(1){
-    top: -44px; left: 44px;
-    font-size: 21px;
-    animation-delay: calc(var(--delay-base) + 1 * var(--delay-added));
-  }
-  
-  .figcaption span:nth-of-type(2){
-    top: -34px; left: -21px;
-    font-size: 89px;
-    font-family: var(--font-display);
-    animation-delay: calc(var(--delay-base) + 2 * var(--delay-added));
-  }
-  
+  .figcaption span:nth-of-type(2),
   .figcaption span:nth-of-type(3){
-    bottom: -38px; right: -21px;
-    font-size: 89px;
-    font-family: var(--font-display);
-    animation-delay: calc(var(--delay-base) + 3 * var(--delay-added));
+    font-size: 70px;
   }
   
   .figcaption span:nth-of-type(4){
-    bottom: -50px; right: -21px;
-    font-size: 21px;
-    animation-delay: calc(var(--delay-base) + 4 * var(--delay-added)); 
+    bottom: -44px;
   }
-  
-  @media screen and (max-width: 539px){
-    .figure{
-      max-width: var(--fig-width);
-      max-height: var(--fig-height);
-      width: auto;
-      height: auto;
-    }
-    
-    .figcaption span:nth-of-type(1),
-    .figcaption span:nth-of-type(4){
-      font-size: 14px;
-    }
-    
-    .figcaption span:nth-of-type(2),
-    .figcaption span:nth-of-type(3){
-      font-size: 70px;
-    }
-    
-    .figcaption span:nth-of-type(4){
-      bottom: -44px;
-    }
-  }
-/* Tou Can image manipulate end here */
-
-.footer {
-    height: 10vh;
 }
+Tou Can image manipulate end here 
+
+*/
+
+
+
+/* 
+.parallax-1 {
+  background-image: url("../images/background2.jpg"); 
+  height: 75vh;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: block;
+}
+
+.parallax-2 {
+  background-image: url("../images/background2.jpg"); 
+  height: 75vh;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: block;
+} */
+
+
+/* 
+.ld-page {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: #fff;
+} */
