@@ -21,9 +21,12 @@ module.exports = function(app) {
    
   });
 
-  // POST route for saving a new piece of data
-  app.post("/api/posts", function(req, res) {
-    
+  // POST route for saving information when a new user requests information
+  app.post("/api/userContacts", function(req, res) {
+    console.log(req.params)
+    db.main.create(req.params).then(function(dbPost){
+      res.json(dbPost)
+    })
   });
 
   // DELETE route for deleting a piece of data
