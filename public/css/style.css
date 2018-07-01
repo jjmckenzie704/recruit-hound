@@ -1,6 +1,6 @@
 /* BEGIN HEADER CSS */
 .fix-search-blue {
-  /* background: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(0, 0, 0)) ; */
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(0, 0, 0)) ;
   height: 100px;  
   -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
   -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
@@ -9,7 +9,7 @@
 }
 
 .fix-search-red {
-  /* background-color: rgb(0, 0, 0); */
+  background-color: rgb(0, 0, 0);
   border-bottom: 2px solid grey;
   height: 50px;
   -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
@@ -26,6 +26,22 @@
   top: 0;
   left: 0;
   background: radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+}
+
+.left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1030;
+  width: 50%;
+}
+
+.right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1030;
+  width: 50%;
 }
 
 .logoLocation {
@@ -46,14 +62,38 @@
   height: 100%;
 }
 
+#tie {
+  position: absolute;
+  width: 10%;
+  height: auto;
+  z-index: 1;
+  opacity: 1;
+  animation: tie-jump 2000ms;
+  left: 238px;
+  top: 93px;  
+}
+
+@keyframes tie-jump {
+  0%{
+    position: fixed;
+    left: 238px;
+    bottom: 0px; 
+    height: 0px;
+    width: 0px; 
+  }
+  100%{
+    left: 238px;
+    top: 93px;  
+  }
+}
+
 @import url('https://fonts.googleapis.com/css?family=Lato|Sedgwick+Ave+Display');
 
 :root {
-  --font-display: 'Sedgwick Ave Display';
+  --font-display: Muli, sans-serif;
   --font-sans-serif: 'Lato';
   --box-shadow: drop-shadow(-5px 5px 4px #248391);
-  --color-bg: #0d3029;
-  --grad-bright: linear-gradient(-55deg, #8fc2c9 0%, #bee0e5 100%);
+  --grad-bright: black;
   --grad-dark: linear-gradient(-55deg, #248391 0%, #8fc2c9 100%);
   --fig-width: 380px;
   --fig-height: 255px;
@@ -62,13 +102,21 @@
   --acc-back: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
+#logo-top {
+  z-index: 2;
+  animation: popInImg2 500ms var(--acc-back) 1 forwards;
+}
 
+#logo-bottom {
+  filter: var(--box-shadow); 
+  animation: popInImg 1500ms var(--acc-back) 1 forwards;
+}
 
 .shadowed{
+  position: absolute;
   width: 100%;
   height: auto;
-  filter: var(--box-shadow);  
-  animation: popInImg 700ms var(--acc-back) 1 forwards;
+  
   animation-delay: var(--delay-base);
   opacity: 0;
   transform: skewY(1deg);
@@ -90,10 +138,11 @@
   height: inherit;
   position: absolute;
   top: 0; 
-  left; 0;
+  left: 0;
   width: 100%; 
   height: 100%;
 }
+
 
 .figure:hover .logoWords{
   opacity: 0;
@@ -104,6 +153,20 @@
   0%{
     transform: skewY(5deg) scaleX(.89) scaleY(.89);
     opacity: 0;
+  }
+
+  100%{
+    opacity: 1;    
+  }
+}
+
+@keyframes popInImg2{
+  0%{
+    transform: skewY(5deg) scaleX(.89) scaleY(.89);
+    opacity: 0;
+  }
+  99.99%{
+    opacity: 0;    
   }
   100%{
     opacity: 1;    
@@ -135,30 +198,18 @@
 }
 
 .logoWords span:nth-of-type(1){
-  top: -44px; left: 44px;
-  font-size: 21px;
+  top: -100px; left: -100px;
+  font-size: 89px;
   animation-delay: calc(var(--delay-base) + 1 * var(--delay-added));
 }
 
 .logoWords span:nth-of-type(2){
-  top: -34px; left: -21px;
+  top: -100px; left: 250px;
   font-size: 89px;
   font-family: var(--font-display);
   animation-delay: calc(var(--delay-base) + 2 * var(--delay-added));
 }
 
-.logoWords span:nth-of-type(3){
-  bottom: -38px; right: -21px;
-  font-size: 89px;
-  font-family: var(--font-display);
-  animation-delay: calc(var(--delay-base) + 3 * var(--delay-added));
-}
-
-.logoWords span:nth-of-type(4){
-  bottom: -50px; right: -21px;
-  font-size: 21px;
-  animation-delay: calc(var(--delay-base) + 4 * var(--delay-added)); 
-}
 
 @media screen and (max-width: 539px){
   .figure{
@@ -174,13 +225,10 @@
   }
   
   .logoWords span:nth-of-type(2),
-  .logoWords span:nth-of-type(3){
+  {
     font-size: 70px;
   }
-  
-  .logoWords span:nth-of-type(4){
-    bottom: -44px;
-  }
+
 }
 
 /* END LEFT SIDE CSS LANDING PAGE */
@@ -193,7 +241,8 @@
   bottom: 0;
   top: 0;
   right: 0;
-  background-color: rgb(232,153,0)
+  background-color: rgb(232,153,0);
+  box-shadow: -5px 0px 5px grey;
 }
 
 .signUp-signIn-location {
@@ -212,6 +261,7 @@
   margin: 20px;
   padding: 20px;
   background: #FFF;
+  box-shadow: -5px 5px 4px black;
 }
 
 .submit-btn {
@@ -391,3 +441,4 @@ right: 0;
 bottom: 0;
 background: #fff;
 } */
+
