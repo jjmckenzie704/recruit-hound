@@ -37,8 +37,8 @@
         </ul>
     </div>
 </nav>
-<nav class="navbar navbar-expand-md navbar-dark wrap right">
-    <a class="navbar-brand log-in-right" href="#">Log In</a>
+<nav class=" navbar-expand-md navbar-dark wrap right">
+    <a class="navbar-brand log-in-right" id='RH' href="#">RecruitHound</a>
 </nav>
 
 <div class='row'>
@@ -48,8 +48,8 @@
             <div class='figure'>
                 <div class='logoWords'>
                     <span>RecruitHound</span>
-                    <!-- <span>...bringing the Hunt </span>
-                    <span>to an End.</span> -->
+                    <span>...bringing the Hunt </span>
+                    <span></span>
                 </div>
                 
                 <img class='loadingPage-Logo shadowed' id='logo-bottom' src="./images/Final-Logo.gif" alt="recruit hound logo">
@@ -64,14 +64,49 @@
             
         <div class='signUp-signIn-location'>
 
-            <form>
-                Username: <input type="text" name="fname"><br>
-                E-mail: <input type="text" name="lname"><br>
-                Password: <input type="text" name="lname"><br>
-                Password: <input type="text" name="lname"><br>
-
-                <button class="button  arrow">Sign Up</button>
-            </form>
+                <div class="container">
+                    <div class="backbox">
+                        <div class="loginMsg">
+                        <div class="textcontent">
+                            <p class="title">Need an account?</p>
+                            <p>Placeholder text</p>
+                            <button id="switch1">Sign Up</button>
+                        </div>
+                        </div>
+                        <div class="signupMsg visibility">
+                        <div class="textcontent">
+                            <p class="title">Have an account?</p>
+                            <p>Log in to see all your collection.</p>
+                            <button id="switch2">LOG IN</button>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- backbox -->
+                
+                    <div class="frontbox">
+                        <div class="login">
+                        <h2>LOG IN</h2>
+                        <div class="inputbox">
+                            <input type="text" name="email" placeholder="  EMAIL">
+                            <input type="password" name="password" placeholder="  PASSWORD">
+                        </div>
+                        <p>FORGET PASSWORD?</p>
+                        <button>LOG IN</button>
+                        </div>
+                
+                        <div class="signup hide">
+                        <h2>SIGN UP</h2>
+                        <div class="inputbox">
+                            <input type="text" name="fullname" placeholder="  FULLNAME">
+                            <input type="text" name="email" placeholder="  EMAIL">
+                            <input type="password" name="password" placeholder="  PASSWORD">
+                        </div>
+                        <button>SIGN UP</button>
+                        </div>
+                
+                    </div>
+                    <!-- frontbox -->
+                </div>
             
         </div>
     </div> 
