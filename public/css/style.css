@@ -44,6 +44,10 @@
   width: 50%;
 }
 
+.log-in-right {
+  float: right;
+}
+
 .logoLocation {
   position: absolute;
   width: auto;
@@ -144,9 +148,15 @@
 }
 
 
-.figure:hover .logoWords{
+
+.figure:hover :nth-child(1){
   opacity: 0;
   transform: scale(.91);
+}
+
+.logoWords:hover :nth-child(n+2){
+  opacity: 1;
+  transform: scale(1);
 }
 
 @keyframes popInImg{
@@ -204,10 +214,19 @@
 }
 
 .logoWords span:nth-of-type(2){
-  top: -100px; left: 250px;
-  font-size: 89px;
+  top: -72px; 
+  left: 100px;
+  font-size: 44px;
   font-family: var(--font-display);
-  animation-delay: calc(var(--delay-base) + 2 * var(--delay-added));
+  /* animation-delay: calc(var(--delay-base) + 2 * var(--delay-added)); */
+}
+
+.logoWords span:nth-of-type(3){
+    top: -70px;
+    left: -89px;
+    font-size: 55px;
+  font-family: var(--font-display);
+  /* animation-delay: calc(var(--delay-base) + 2 * var(--delay-added)); */
 }
 
 
@@ -218,17 +237,6 @@
     width: auto;
     height: auto;
   }
-  
-  .logoWords span:nth-of-type(1),
-  .logoWords span:nth-of-type(4){
-    font-size: 14px;
-  }
-  
-  .logoWords span:nth-of-type(2),
-  {
-    font-size: 70px;
-  }
-
 }
 
 /* END LEFT SIDE CSS LANDING PAGE */
