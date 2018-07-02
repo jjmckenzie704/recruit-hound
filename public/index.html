@@ -2,96 +2,109 @@
 <html lang='en'>
 <head>
     <meta charset="utf-8" />
-    
-    
+     
     <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
     <link rel="icon" href="./images/icon.png">
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-
     <!-- Local styling -->
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    
-       
+
     <title>Recruit Hound</title>
 </head>
 <body>
 
 
 
-<header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top fix-search-blue wrap">
-        <a class="navbar-brand" href="#">Carousel</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
-            <form class="form-inline mt-2 mt-md-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-</header>
 
+<!-- <nav class="navbar navbar-expand-md navbar-dark fix-search-blue wrap left">
+    <a class="navbar-brand" href="#">Carousel</a> 
+</nav> -->
+<nav class=" navbar-expand-md navbar-dark right">
+    <a class="navbar-brand log-in-right" id='contact-us' href="#">Contact Us</a>
+</nav>
 
-<div class="container">
-    <div class="parallax-1">
-        <div class="ptext">
-            <div class="figure">
-                <img class='toucan' src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577128/toucan-by-william-warby.jpg" alt="Toucan photo by William Warby">
-                <div class='figcaption'>
-                    <span>Fig.1</span>
-                    <span>Tou</span>
-                    <span>Can</span>
+<div class='row'>
+    <div class='col-md-6 leftSide'>
+
+        <div class='logoLocation'>
+            <div class='figure'>
+                <div class='logoWords'>
+                    <span>RecruitHound</span>
+                    <!-- <span>...bringing the Hunt </span>
+                    <span>to and End.</span> -->
                 </div>
-            </div>
-            <div class="figure">
-                <img class='toucan' src="./images/background1.png" alt="Toucan photo by William Warby">
-                <div class='figcaption'>
-                    <span>Fig.1</span>
-                    <span>The</span>
-                    <span>Hunt</span>
-                </div>
+                
+                <img class='loadingPage-Logo shadowed' id='logo-bottom' src="./images/Final-Logo.gif" alt="recruit hound logo">
+                <img class='loadingPage-Logo shadowed' id='logo-top' src="./images/Final-Logo2.gif" alt="recruit hound logo">
+                <img class='shadowed' id='tie' src="./images/tie2.png" alt="tie">
             </div>
         </div>
-    </div>
+    </div> 
+    
+    <div class='col-md-6 rightSide'>
 
-    <section class="section section-light">
-        <h2>Section Two</h2>
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, dolor esse enim porro reprehenderit pariatur cupiditate eveniet maiores, tenetur consectetur voluptatem illo et fuga voluptate! 
-        </p>
-    </section>
+            
+        <div class='signUp-signIn-location'>
 
-
+                <div class="container">
+                    <div class="backbox">
+                        <div class="loginMsg">
+                        <div class="textcontent">
+                            <p class="title">Create an account?</p>
+                            <p>Placeholder text</p>
+                            <button id="switch1">Sign Up</button>
+                        </div>
+                        </div>
+                        <div class="signupMsg visibility">
+                        <div class="textcontent">
+                            <p class="title">Have an account?</p>
+                            <p>Log in to see all your collection.</p>
+                            <button id="switch2">LOG IN</button>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- backbox -->
+                
+                    <div class="frontbox">
+                        <div class="login">
+                        <h2>LOG IN</h2>
+                        <div class="inputbox">
+                            <input type="text" name="email" placeholder="  EMAIL">
+                            <input type="password" name="password" placeholder="  PASSWORD">
+                        </div>
+                        <p>FORGET PASSWORD?</p>
+                        <button>LOG IN</button>
+                        </div>
+                
+                        <div class="signup hide">
+                        <h2>SIGN UP</h2>
+                        <div class="inputbox">
+                            <input type="text" name="fullname" placeholder="  FULLNAME">
+                            <input type="text" name="email" placeholder="  EMAIL">
+                            <input type="password" name="password" placeholder="  PASSWORD">
+                        </div>
+                        <button>SIGN UP</button>
+                        </div>
+                
+                    </div>
+                    <!-- frontbox -->
+                </div>
+            
+        </div>
+    </div> 
 </div>
 
-<div class="parallax-2">
-    <div class="ptext">
-        test
-    </div>
-</div>
 
 
 
-<footer class="footer">
-    <div class="container">
-        <span class="text-muted">Place sticky footer content here.</span>
-    </div>
-</footer>
+
+    <footer class="footer">
+        <div class="footer-font">Footer content</div>
+    </footer>
+
+
 
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
@@ -108,4 +121,58 @@
     - Make sure page runs on heroku/deployed website
     - Make footer better. No idea what to put here. Ask others.
 
+
+    - pages
+        - landing page
+        - create account
+        - profile
+        - list of recuiters profile was sent to
+        - 
+
+
 -->
+
+
+
+<!-- 
+<div class='ld-page'></div>
+
+<div class="parallax-1">
+    <div class="ptext col-md-6">
+        <div class="figure">
+            <img class='toucan' src="./images/background1.png" alt="Toucan photo by William Warby">
+            <div class='div class='logoWords''>
+                <span>Fig.1</span>
+                <span>The</span>
+                <span>Hunt</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="ptext">
+        <div class="figure col-md-6">
+            <img class='toucan' src="./images/german-shorthaired-pointer-silhouette-4.jpg" alt="Toucan photo by William Warby">
+            <div class='div class='logoWords''>
+                <span>Fig.1</span>
+                <span>The</span>
+                <span>Hunt</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 
+<section class="section section-light">
+    <h2>Section Two</h2>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, dolor esse enim porro reprehenderit pariatur cupiditate eveniet maiores, tenetur consectetur voluptatem illo et fuga voluptate! 
+    </p>
+</section> -->
+
+
+
+<!-- <div class="parallax-2">
+<div class="ptext">
+    test
+</div>
+</div> --> -->
