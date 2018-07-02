@@ -2,8 +2,16 @@
 // api-routes.js - this file offers a set of routes for displaying and saving data to the db
 // *********************************************************************************
 
-// Requiring our models
+// Requiring our dependencies 
 var db = require("../models");
+var email 	= require("emailjs");
+var server 	= email.server.connect({
+  user: 'hello@ryanadiaz.com',
+  password: 'testpassword',
+  host: 'mail.ryanadiaz.com',
+  port: 587,
+  tls:  false
+});
 
 // Routes
 // =============================================================
@@ -28,6 +36,28 @@ module.exports = function(app) {
       res.json(dbPost)
     })
   });
+
+  app.post("/api/sendmail", function(req, res) {
+    console.log("Sendmail has been fired!");
+    console.log(req.body);
+    
+    server.send({
+      text:     req.body.message, 
+      from:     req.body.email, 
+      to:       "Ryan Diaz ryandiaz@gmail.com",
+      cc:       "", 
+      subject:  "RecruitHound Contact - Job Seeker"
+    }, function(err, message) {
+        console.log(err || message); 
+        if (!err) {   // Sends back status message in the form of an object -> res.status
+          res.json({status: "success"});
+        } else {
+          res.json({status: "error"});
+        }
+  });
+
+});
+
 
   // DELETE route for deleting a piece of data
   app.delete("/api/posts/:id", function(req, res) {

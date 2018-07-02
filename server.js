@@ -13,7 +13,13 @@ var morgan = require('morgan');
 var passport = require('passport');
 var flash    = require('connect-flash');
 var exphbs = require('express-handlebars');
-var sendmail = require('sendmail')
+
+
+
+
+
+
+
 
 // Sets up the Express App
 // =============================================================

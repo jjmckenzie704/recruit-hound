@@ -1,64 +1,59 @@
-$(document).ready(function(sendmail) {
+$(document).ready(function() {
 
+$("#showContactModal").on("click", function () {   // Button to display the contact us modal
+    $("#jobseekercontact").attr("style", "display: inline-block");
+    $("#recruitercontact").attr("style", "display: inline-block");
+    $("#jobseekerform").attr("style", "display: none");
+    $("#recruiterform").attr("style", "display: none");
+    $('#contactus-success').attr("style", "display: none");
+    $('#contactus-error').attr("style", "display: none");
+})
 
-    //================================//
-    //Below this line is the code for pushing recruiter information to the recruiter_contact table
-    $("#showContactModal").on("click", function () {
-        $("#jobseekercontact").attr("style", "display: inline-block");
-        $("#recruitercontact").attr("style", "display: inline-block");
-        $("#jobseekerform").attr("style", "display: none");
-        $("#recruiterform").attr("style", "display: none");
-    })
-
-
-    //This is for the onclick of the contact us form
-    $("#jobseekercontact").on("click", function() {
-
-
-
-    $("#jobseekercontact").attr("style", "display: none");
+$("#jobseekercontact").on("click", function() {   // Button to display the job seeker contact form
+    $(this).attr("style", "display: none");
     $("#recruitercontact").attr("style", "display: none");
     $("#jobseekerform").attr("style", "display: block")
 
+    $(".submitcontact").on("click", function() {   // Button to submit the job seeker contact form
+        console.log("Submit has been fired");
+        event.preventDefault()
 
-        //This is the sequelize post for contact us
-        $(".submitcontact").on("click", function() {
-            console.log("Submit has been fired");
-            event.preventDefault()
+        upsertUser({   // Build the userData object
+            person_name: $('#contactus-name').val(),
+            number1: $('#contactus-phone').val(),
+            email: $('#contactus-email').val(),
+            message: $('#contactus-message').val()
+        })
 
-            upsertUser({
-                person_name: $('#contactus-name').val(),
-                number1: $('#contactus-phone').val(),
-                email: $('#contactus-email').val(),
-                message: $('#contactus-message').val()
+        function upsertUser(userData) {   // Use userData object to fire some post methods
+            $.post("/api/userContacts", userData).then(console.log("Database updated!"))   // Write userData to the database
+
+            $.post("/api/sendmail", userData, function(res) {    // Send email containing userData
+                console.log(res.status);
+                if (res.status == 'success') {
+                    $('#contactus-name').val('');  // Clear the contact form
+                    $('#contactus-phone').val('');
+                    $('#contactus-email').val('');
+                    $('#contactus-message').val('');
+                    $('.modal-title').append('');
+                    $('#contactus-success').attr('style', 'display: block');   // Display a success message
+                } else {
+                    $('#contactus-error').attr('style', 'display: block');   // Display an error message
+                }
             })
-
-            function upsertUser(userData) {
-                $.post("/api/userContacts", userData).then(console.log("Done!")) 
-            }
-
-            sendmail({
-                from: $('#contactus-email').val(),
-                to: 'chad.pilker@gmail.com',
-                replyTo: 'hello@recruithound.io',
-                subject: $('#contactus-name').val() + ' New User Requests Information',
-                html: $('#contactus-message').val()
-            }, function (err, reply) {
-                console.log(err && err.stack)
-                console.dir(reply)
-            })
-            
-        });
+        }
+ 
     });
+});
         
     //Post new recruiters wanting information from our company
     $("#recruitercontact").on("click", function() {
         //append functionality
         $("#jobseekercontact").attr("style", "display: none");
-        $("#recruitercontact").attr("style", "display: none");
+        this.attr("style", "display: none");
         $("#recruiterform").attr("style", "display: block")
 
-        //This is the sequelize post for contact us
+        //This is for the submit click of the recruiter contact form
         $(".submitcontact").on("click", function() {
             event.preventDefault()
             upsertRecruiter({
