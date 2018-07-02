@@ -14,8 +14,27 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
-    username: {
-      type: DataTypes.TEXT
+    address1: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    address2: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    city: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    state: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate: {
+        len: [1, 2]
+      }
     },
     password: {
       type: DataTypes.STRING,
