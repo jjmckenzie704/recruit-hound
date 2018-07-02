@@ -1,6 +1,43 @@
-var $j = jQuery.noConflict();
+
+let $loginMsg = $('.loginMsg'),
+    $login = $('.login'),
+    $signupMsg = $('.signupMsg'),
+    $signup = $('.signup'),
+    $frontbox = $('.frontbox');
+  
+  $('#switch1').on('click', function() {
+    $loginMsg.toggleClass("visibility");
+    $frontbox.addClass("moving");
+    $signupMsg.toggleClass("visibility");
+  
+    $signup.toggleClass('hide');
+    $login.toggleClass('hide');
+  })
+  
+  $('#switch2').on('click', function() {
+    $loginMsg.toggleClass("visibility");
+    $frontbox.removeClass("moving");
+    $signupMsg.toggleClass("visibility");
+  
+    $signup.toggleClass('hide');
+    $login.toggleClass('hide');
+  })
+  
+  setTimeout(function(){
+    $('#switch1').click()
+  },1000)
+  
+  setTimeout(function(){
+    $('#switch2').click()
+  },3000)
+
+
+let $j = jQuery.noConflict();
 
 $j( document ).ready(function() {
+
+
+  
 
 
     console.log( "ready!" );
@@ -34,6 +71,11 @@ $j.get("/api/users", function(data) {
     $j('.content').html(createNewRow(data[key]));
 });
 
+
+
+
+
+
 function createNewRow(user) {
     console.log("success");
     let $newUserRow = $j(
@@ -51,11 +93,9 @@ function createNewRow(user) {
 }
 
 
-
 $j.get("/api/recruiterAgencies", function(data) {
     console.log('Begin displaying all recruiters');
     console.log(data);
 });
-
 
 });
