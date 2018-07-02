@@ -61,8 +61,9 @@ $j(function() {
     });
 });
 
-console.log("Begin $j.get");
+
 $j.get("/api/users", function(data) {
+    console.log('Begin displaying all users');
     console.log(data);
     for (key in data) {
         createNewRow(data[key]);
@@ -92,6 +93,9 @@ function createNewRow(user) {
 }
 
 
-
+$j.get("/api/recruiterAgencies", function(data) {
+    console.log('Begin displaying all recruiters');
+    console.log(data);
+});
 
 });

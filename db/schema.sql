@@ -1,3 +1,5 @@
 DROP DATABASE IF EXISTS main;
 
 CREATE DATABASE main;
+
+USE main;
