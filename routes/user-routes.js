@@ -44,9 +44,13 @@ module.exports = function(app) {
     server.send({
       text:     req.body.message, 
       from:     req.body.email, 
-      to:       "Ryan Diaz ryandiaz@gmail.com",
-      cc:       "", 
-      subject:  "RecruitHound Contact - Job Seeker"
+      to:       "Ryan Diaz <ryandiaz@gmail.com>",
+      cc:       "Chad Pilker <chad.pilker@gmail.com>", 
+      subject:  "RecruitHound Contact - Job Seeker",
+      attachment:
+      [
+        {data: '<html>Name: ' + req.body.person_name + '<br />Phone:  ' + req.body.number1 + '<br />Message: ' + req.body.message + '</html>', alternative:true}
+      ]
     }, function(err, message) {
         console.log(err || message); 
         if (!err) {   // Sends back status message in the form of an object -> res.status
@@ -54,9 +58,8 @@ module.exports = function(app) {
         } else {
           res.json({status: "error"});
         }
+    });
   });
-
-});
 
 
   // DELETE route for deleting a piece of data

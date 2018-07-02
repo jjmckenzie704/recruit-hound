@@ -65,7 +65,7 @@ $("#recruitercontact").on("click", function() {   // Button to display the recru
         function upsertRecruiter(recruiterData) {
             $.post("/api/recruiterContacts", recruiterData).then(console.log("Database updated!!"))   // Write recruiterData to the database
 
-            $.post("/api/sendmail", recruiterData, function(res) {    // Send email containing recruiterData
+            $.post("/api/contactus-recruiter", recruiterData, function(res) {    // Send email containing recruiterData
                 console.log(res.status);
                 if (res.status == 'success') {
                     $('#recruiter-name').val('');  // Clear the contact form
