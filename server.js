@@ -44,12 +44,13 @@ app.use(bodyParser.json());  // parse application/json
 
 // Required for passport
 app.use(session({
-	secret: 'ryanjimmychadmatt',
+	secret: 'keyboard cat',
 	resave: true,
 	saveUninitialized: true
  } )); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
+
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 // Static directory
@@ -57,7 +58,7 @@ app.use(express.static("public"));
 
 // Routes
 // =============================================================
-require("./routes/user-routes.js")(app);
+require("./routes/user-routes.js")(app, passport);
 require("./routes/html-routes.js")(app);
 require("./routes/recruiter-routes.js")(app);
 var authRoute = require('./routes/passport-routes.js')(app, passport);
