@@ -16,7 +16,7 @@ $("#jobseekercontact").on("click", function() {   // Button to display the job s
 
     $(".submitcontact").on("click", function() {   // Button to submit the job seeker contact form
         console.log("Submit has been fired");
-        event.preventDefault()
+        event.preventDefault();
 
         upsertUser({   // Build the userData object
             person_name: $('#contactus-name').val(),
@@ -42,31 +42,45 @@ $("#jobseekercontact").on("click", function() {   // Button to display the job s
                 }
             })
         }
- 
     });
 });
-        
-    //Post new recruiters wanting information from our company
-    $("#recruitercontact").on("click", function() {
-        //append functionality
-        $("#jobseekercontact").attr("style", "display: none");
-        this.attr("style", "display: none");
-        $("#recruiterform").attr("style", "display: block")
 
-        //This is for the submit click of the recruiter contact form
-        $(".submitcontact").on("click", function() {
-            event.preventDefault()
-            upsertRecruiter({
-                recruiting_agency: $('#recruiter-company').val(),
-                person_name: $('#recruiter-name').val(),
-                number1: $('#recruiter-phone').val(),
-                email: $('#recruiter-email').val(),
-                message: $('#recruiter-message').val()
+$("#recruitercontact").on("click", function() {   // Button to display the recruiter contact form
+    $("#jobseekercontact").attr("style", "display: none");
+    $(this).attr("style", "display: none");
+    $("#recruiterform").attr("style", "display: block")
+
+    $(".submitcontact").on("click", function() {   // Button to submit the recruiter contact form
+        console.log("Submit has been fired");
+        event.preventDefault();
+
+        upsertRecruiter({   // Build the recruiterData object
+            recruiting_agency: $('#recruiter-company').val(),
+            person_name: $('#recruiter-name').val(),
+            number1: $('#recruiter-phone').val(),
+            email: $('#recruiter-email').val(),
+            message: $('#recruiter-message').val()
+        })
+
+        function upsertRecruiter(recruiterData) {
+            $.post("/api/recruiterContacts", recruiterData).then(console.log("Database updated!!"))   // Write recruiterData to the database
+
+            $.post("/api/sendmail", recruiterData, function(res) {    // Send email containing recruiterData
+                console.log(res.status);
+                if (res.status == 'success') {
+                    $('#recruiter-name').val('');  // Clear the contact form
+                    $('#recruiter-company').val('');
+                    $('#recruiter-phone').val('');
+                    $('#recruiter-email').val('');
+                    $('#recruiter-message').val('');
+                    $('.modal-title').append('');
+                    $('#contactus-success').attr('style', 'display: block');   // Display a success message
+                } else {
+                    $('#contactus-error').attr('style', 'display: block');   // Display an error message
+                }
             })
-
-            function upsertRecruiter(recruiterData) {
-                $.post("/api/recruiterContacts", recruiterData).then(console.log("Done!")) 
-            }       
-        });
+        }       
     });
+});
+
 })
