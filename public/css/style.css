@@ -1,3 +1,15 @@
+#contactus-success {
+  font-style: italic; 
+  color: lightgreen;
+  line-height: 1.5;
+}
+
+#contactus-error {
+  font-style: italic; 
+  color: red;
+  line-height: 1.5;
+}
+
 /* BEGIN HEADER CSS */
 .fix-search-blue {
   background: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(0, 0, 0)) ;
