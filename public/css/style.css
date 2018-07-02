@@ -10,38 +10,76 @@
   line-height: 1.5;
 }
 
+
 .fix-search-blue {
-    background: linear-gradient(to top, rgba(34, 30, 30, 0), rgb(255, 255, 255)) ;
-    height: 100px;
-    border-bottom: 2px solid grey;
-    -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
-    -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
-    -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
-    transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  background: linear-gradient(to top, rgba(34, 30, 30, 0), rgb(255, 255, 255)) ;
+  height: 100px;
+  border-bottom: 2px solid grey;
+  -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  color: #00A0AE;
 }
 
 .fix-search-red {
-    background-color: rgb(255, 255, 255);
-    height: 50px;
-    -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
-    -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
-    -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
-    transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  border-bottom: 2px solid grey;
+  -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  color: #00A0AE;
 }
 
 .parallax-1 {
-    background-image: url("../images/background2.jpg"); 
-    height: 75vh;
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: block;
+  background-image: url("../images/background3.jpg"); 
+  height: 75vh;
+  top: 160px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  z-index: -25;
+}
+
+#RH  {
+  font-size: 10vh;
+  color: #000;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+}
+
+#RH-message {
+  position: relative;
+  font-size: 3vh;
+  color: #000;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+}
+
+
+.sectionOne {
+  border-radius: 50% 50% 0% 0%;
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(154, 193, 196));
+  padding: 50px 80px;
+  z-index: 25;
+  border-top: 1px solid rgb(154, 193, 196);
+}
+
+.sectionTwo {
+  background: linear-gradient(to top, rgb(255, 255, 255), rgb(154, 193, 196));
+  padding: 50px 80px;
+  z-index: 25;
+  border-top: 1px solid rgb(154, 193, 196);
 }
 
 .parallax-2 {
-    background-image: url("../images/background1.png"); 
     height: 75vh;
     position: relative;
     background-position: center;
@@ -50,7 +88,6 @@
     background-attachment: fixed;
     display: block;
 }
-
 
 .ptext .border {
     background-color: rgb(17, 17, 17);
@@ -58,29 +95,11 @@
     padding: 20px;
 }
 
-.ptext {
-    text-align: center;
-    color: #000;
-    font-size: 27px;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-}
-
-.section {
-    text-align: center;
-    padding: 50px 80px;
-    background-color: #f4f4f4;
-    color: #666;
-}
-
 .logoLocation {
-  position: absolute;
-  width: auto;
+  position: relative;
+  max-width: 200px;
+  top: -150px;
   height: auto;
-  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -101,21 +120,21 @@
   z-index: 1;
   opacity: 1;
   animation: tie-jump 2000ms;
-  left: 238px;
-  top: 93px;  
+  left: 124px;
+  top: 54px;
 }
 
 @keyframes tie-jump {
   0%{
     position: fixed;
-    left: 238px;
+    left: 124px;
     bottom: 0px; 
     height: 0px;
     width: 0px; 
   }
   100%{
-    left: 238px;
-    top: 93px;  
+    left: 124px;
+    top: 54px;
   }
 }
 
@@ -124,11 +143,9 @@
 :root {
   --font-display: Muli, sans-serif;
   --font-sans-serif: 'Lato';
-  --box-shadow: drop-shadow(-5px 5px 4px #248391);
+  --box-shadow: drop-shadow(-1px 1px 2px #248391);
   --grad-bright: black;
   --grad-dark: linear-gradient(-55deg, #248391 0%, #8fc2c9 100%);
-  --fig-width: 380px;
-  --fig-height: 255px;
   --delay-base: 500ms;
   --delay-added: 100ms;
   --acc-back: cubic-bezier(0.175, 0.885, 0.320, 1.275);
@@ -146,9 +163,8 @@
 
 .shadowed{
   position: absolute;
-  width: 100%;
+  max-width: 300px;
   height: auto;
-  
   animation-delay: var(--delay-base);
   opacity: 0;
   transform: skewY(1deg);
@@ -156,8 +172,8 @@
 
 .figure{
   position: relative;
-  width: var(--fig-width);
-  height: var(--fig-height);
+  width: 200px;
+  height: auto;
   transition: transform 600ms var(--acc-back);
 }
 
@@ -218,8 +234,8 @@
 
 @media screen and (max-width: 539px){
   .figure{
-    max-width: var(--fig-width);
-    max-height: var(--fig-height);
+    max-width: 200px;
+    max-height: auto;
     width: auto;
     height: auto;
   }
