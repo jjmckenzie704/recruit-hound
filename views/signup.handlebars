@@ -16,43 +16,43 @@
 
 <section class="container">
 
-<form id="usersignup" name="signup" method="post" action="/signup">
+<form id="usersignup" name="signup" method="post" action="signup">
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="newemail">Email</label>
-                <input type="email" class="form-control" id="newemail" placeholder="Email">
+                <input type="email" class="form-control" id="newemail" placeholder="Email" name="newemail">
         </div>
         <div class="form-group col-md-6">
             <label for="newpassword">Password</label>
-                <input type="password" class="form-control" id="newpassword" placeholder="Password">
+                <input type="password" class="form-control" id="newpassword" placeholder="Password" name="newpassword">
         </div>
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="newfirstname">First Name</label>
-                <input type="email" class="form-control" id="newfirstname" placeholder="Jane">
+                <input type="text" class="form-control" id="newfirstname" placeholder="Jane" name="newfirstname">
         </div>
         <div class="form-group col-md-6">
             <label for="newlastname">Last Name</label>
-                <input type="password" class="form-control" id="newlastname" placeholder="Smith">
+                <input type="text" class="form-control" id="newlastname" placeholder="Smith" name="newlastname">
         </div>
     </div>
     <div class="form-group">
         <label for="newaddress1">Address</label>
-            <input type="text" class="form-control" id="newaddress1" placeholder="1234 Main St">
+            <input type="text" class="form-control" id="newaddress1" placeholder="1234 Main St" name="newaddress1">
     </div>
     <div class="form-group">
         <label for="newaddress2">Address 2</label>
-            <input type="text" class="form-control" id="newaddress2" placeholder="Apartment, studio, or floor">
+            <input type="text" class="form-control" id="newaddress2" placeholder="Apartment, studio, or floor" name="newaddress2">
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="newcity">City</label>
-            <input type="text" class="form-control" id="newcity">
+            <input type="text" class="form-control" id="newcity" name="newcity">
         </div>
         <div class="form-group col-md-4">
             <label for="newstate">State</label>
-                <select id="newstate" class="form-control">
+                <select id="newstate" class="form-control" name="newstate">
                     <option selected disabled>Choose...</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -109,28 +109,38 @@
         </div>
         <div class="form-group col-md-2">
             <label for="newzip">Zip</label>
-                <input type="text" class="form-control" id="newzip">
+                <input type="text" class="form-control" id="newzip" name="newzip">
+        </div>
+
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="newresume" name="newresume">
+                    <label class="custom-file-label" for="newresume">Upload Resume</label>
+            </div>
+
+        <div class="form-group">
+            <label for="skills-block">What technologies do you work with?</label>
+            <div class="btn-group-toggle" data-toggle="buttons" id="skills-block">
+                
+            <!-- Begin list of skills -->
+            </div>
         </div>
     </div>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="javascript">
-        <label class="form-check-label" for="javascript">JavaScript</label>
-    </div>
-    <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="bootstrap">
-        <label class="form-check-label" for="bootstrap">Bootstrap</label>
-    </div>
-    <div class="form-check form-check-inline">
-        <label class="form-check-label" for="handlebars">Handlebars</label>
-        <input class="form-check-input" type="checkbox" id="handlebars">
-    </div>
-  <button type="submit" class="btn btn-primary">Create my Profile</button>
+
+    <input type="hidden" id="skill" name="skill" value="">
+
+  <input type="submit" class="btn btn-primary submitprofile" value="Create my Profile">
 </form>
 
 </section>
 
     
- 
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Local scripting -->
+<script src="./js/signup.js" /></script>
 </body>
  
 </html>
