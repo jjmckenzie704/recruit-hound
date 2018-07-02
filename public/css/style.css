@@ -1,46 +1,93 @@
 /* BEGIN HEADER CSS */
 .fix-search-blue {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(0, 0, 0)) ;
-  height: 100px;  
+  background: linear-gradient(to top, rgba(34, 30, 30, 0), rgb(255, 255, 255)) ;
+  height: 100px;
+  border-bottom: 2px solid grey;
   -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
   -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
   -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
   transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  color: #00A0AE;
 }
 
 .fix-search-red {
-  background-color: rgb(0, 0, 0);
-  border-bottom: 2px solid grey;
+  background-color: rgb(255, 255, 255);
   height: 50px;
+  border-bottom: 2px solid grey;
   -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
   -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
   -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
   transition: background-color 0.5s ease-out, height 0.5s ease-out;
-}
-/* END HEADER CSS */
-
-/* BEGIN LEFT SIDE CSS LANDING PAGE */
-.leftSide {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  background: radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+  color: #00A0AE;
 }
 
-.left {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1030;
-  width: 50%;
+.parallax-1 {
+  background-image: url("../images/background3.jpg"); 
+  height: 75vh;
+  top: 160px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  z-index: -25;
+}
+
+#RH  {
+  font-size: 10vh;
+  color: #000;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+}
+
+#RH-message {
+  position: relative;
+  font-size: 3vh;
+  color: #000;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+}
+
+
+.sectionOne {
+  border-radius: 50% 50% 0% 0%;
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(154, 193, 196));
+  padding: 50px 80px;
+  z-index: 25;
+  border-top: 1px solid rgb(154, 193, 196);
+}
+
+.sectionTwo {
+  background: linear-gradient(to top, rgb(255, 255, 255), rgb(154, 193, 196));
+  padding: 50px 80px;
+  z-index: 25;
+  border-top: 1px solid rgb(154, 193, 196);
+}
+
+.parallax-2 {
+    height: 75vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: block;
+}
+
+.ptext .border {
+    background-color: rgb(17, 17, 17);
+    color: #fff;
+    padding: 20px;
 }
 
 .logoLocation {
-  position: absolute;
-  width: auto;
+  position: relative;
+  max-width: 200px;
+  top: -150px;
   height: auto;
-  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -61,21 +108,21 @@
   z-index: 1;
   opacity: 1;
   animation: tie-jump 2000ms;
-  left: 238px;
-  top: 93px;  
+  left: 124px;
+  top: 54px;
 }
 
 @keyframes tie-jump {
   0%{
     position: fixed;
-    left: 238px;
+    left: 124px;
     bottom: 0px; 
     height: 0px;
     width: 0px; 
   }
   100%{
-    left: 238px;
-    top: 93px;  
+    left: 124px;
+    top: 54px;
   }
 }
 
@@ -84,11 +131,9 @@
 :root {
   --font-display: Muli, sans-serif;
   --font-sans-serif: 'Lato';
-  --box-shadow: drop-shadow(-5px 5px 4px #248391);
+  --box-shadow: drop-shadow(-1px 1px 2px #248391);
   --grad-bright: black;
   --grad-dark: linear-gradient(-55deg, #248391 0%, #8fc2c9 100%);
-  --fig-width: 380px;
-  --fig-height: 255px;
   --delay-base: 500ms;
   --delay-added: 100ms;
   --acc-back: cubic-bezier(0.175, 0.885, 0.320, 1.275);
@@ -106,9 +151,8 @@
 
 .shadowed{
   position: absolute;
-  width: 100%;
+  max-width: 300px;
   height: auto;
-  
   animation-delay: var(--delay-base);
   opacity: 0;
   transform: skewY(1deg);
@@ -116,8 +160,8 @@
 
 .figure{
   position: relative;
-  width: var(--fig-width);
-  height: var(--fig-height);
+  width: 200px;
+  height: auto;
   transition: transform 600ms var(--acc-back);
 }
 
@@ -125,26 +169,19 @@
    transform: scale(1.05) skewY(-1deg); 
 } 
 
-.logoWords{
-  transition: transform 600ms var(--acc-back), opacity 600ms ease-in;
-  height: inherit;
-  position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%; 
-  height: 100%;
-}
-
-
-
 .figure:hover :nth-child(1){
   opacity: 1;
   transform: scale(.91);
 }
 
-.logoWords:hover :nth-child(n+2){
+.figure:hover :nth-child(2){
   opacity: 1;
-  transform: scale(1);
+  transform: scale(.91);
+}
+
+.figure:hover :nth-child(3){
+  opacity: 1;
+  transform: scale(.91);
 }
 
 @keyframes popInImg{
@@ -171,18 +208,6 @@
   }
 }
 
-.logoWords span{
-  position: absolute;
-  display: block;
-  background: var(--grad-bright);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: var(--font-sans-serif);
-  transform: skewY(-13deg);
-  text-shadow: var(--box-shadow);
-  animation: popIn 600ms var(--acc-back) 1 forwards;
-  opacity: 0;
-}
 
 @keyframes popIn{
   0%,13%{
@@ -195,314 +220,19 @@
   }
 }
 
-.logoWords span:nth-of-type(1){
-  top: -100px; left: -100px;
-  font-size: 89px;
-  animation-delay: calc(var(--delay-base) + 1 * var(--delay-added));
-}
-
-.logoWords span:nth-of-type(2){
-  top: -72px; 
-  left: 100px;
-  font-size: 44px;
-  font-family: var(--font-display);
-  /* animation-delay: calc(var(--delay-base) + 2 * var(--delay-added)); */
-}
-
-.logoWords span:nth-of-type(3){
-    top: -70px;
-    left: -89px;
-    font-size: 55px;
-  font-family: var(--font-display);
-  /* animation-delay: calc(var(--delay-base) + 2 * var(--delay-added)); */
-}
-
-
 @media screen and (max-width: 539px){
   .figure{
-    max-width: var(--fig-width);
-    max-height: var(--fig-height);
+    max-width: 200px;
+    max-height: auto;
     width: auto;
     height: auto;
   }
 }
 
-/* END LEFT SIDE CSS LANDING PAGE */
-
-/* BEGIN RIGHT SIDE CSS LANDING PAGE */
-
-.right {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1030;
-  width: 50%;
-}
-
-#contact-us {
-  font-size: 25px;  
-  padding: 15px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  width: 25%;
-  text-align: center;
-}
-
-.rightSide {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  right: 0;
-  background-color: rgb(232,153,0);
-  box-shadow: -5px 0px 5px grey;
-}
-
-.button {
-  display: inline-block;
-  font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  position: relative;
-  padding: .8em 1.4em;
-  padding-right: 4.7em;
-  background: #009ED8;
-  border: none;
-  color: white;
-  transition: .2s;
-}
-.button:before,
-.button:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  padding-top: inherit;
-  padding-bottom: inherit;
-  width: 2.8em;
-  content: "\00a0";
-  font-family: 'FontAwesome', sans-serif;
-  font-size: 1.2em;
-  text-align: center;
-  transition: .2s;
-  transform-origin: 50% 60%;
-}
-.button:before {
-  background: rgba(0, 0, 0, 0.1);
-}
-
-.button {
-  min-width: 15em;
-}
-.arrow {
-  background: #FE5F55;
-}
-.arrow:hover {
-  background: #fe2f22;
-}
-.arrow:active,
-.arrow:focus {
-  background: #b90c01;
-}
-.arrow:after {
-  content: "\F054";
-}
-.arrow:hover:after {
-  -webkit-animation: bounceright .3s alternate ease infinite;
-  animation: bounceright .3s alternate ease infinite;
-}
-@-webkit-keyframes bounceright {
-from {
-  -webkit-transform: translateX(0);
-}
-to {
-  -webkit-transform: translateX(3px);
-}
-}
-@keyframes bounceright {
-from {
-  transform: translateX(0);
-}
-to {
-  transform: translateX(3px);
-}
-}
-
-
-.signUp-signIn-location {
-  position: absolute;
-  width: 80%;
-  height: 45%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font: 14px/1.21 Roboto, 'Helvetica Neue', arial, helvetica, sans-serif;
-}
-
-.container{
-  /*border:1px solid white;*/
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  display: inline-flex; 
-}
-.backbox{  
-  background-color: #404040;
-  width: 100%;
-  height: 80%;
-  position: absolute;
-  transform: translate(0,-50%);
-  top:50%;
-  display: inline-flex;
-}
-
-.frontbox{
-  background-color: white;
-  border-radius: 20px;
-  height: 100%;
-  width: 50%;
-  z-index: 10;
-  position: absolute;
-  right:0;
-  margin-right: 3%;
-  margin-left: 3%;
-  transition: right .8s ease-in-out;
-}
-
-.moving{
-  right:45%;
-}
-
-.loginMsg, .signupMsg{
-  width: 50%;
-  height: 100%;
-  font-size: 15px;
-  box-sizing: border-box;
-}
-
-.loginMsg .title,
-.signupMsg .title{
-  font-weight: 300;
-  font-size: 23px;
-}
-
-.loginMsg p,
-.signupMsg p {
-  font-weight: 100;
-}
-
-.textcontent{
-  color:white;
-  margin-top:65px;
-  margin-left: 12%;
-}
-
-.loginMsg button,
-.signupMsg button {
-  background-color: #404040;
-  border: 2px solid white;
-  border-radius: 10px;
-  color:white;
-  font-size: 12px;
-  box-sizing: content-box;
-  font-weight: 300;
-  padding:10px;
-  margin-top: 20px;
-}
-
-/* front box content*/
-.login, .signup{
-  padding: 20px;
-  text-align: center;
-}
-
-.login h2,
-.signup h2 {
-  color: #35B729;
-  font-size:22px;
-}
-
-.inputbox{
-  margin-top:30px; 
-}
-.login input, 
-.signup input {
-  display: block;
-  width: 100%;
-  height: 40px;
-  background-color: #f2f2f2;
-  border: none;
-  margin-bottom:20px;
-  font-size: 12px;
-}
-
-.login button,
-.signup button{
-  background-color: #35B729;
-  border: none;
-  color:white;
-  font-size: 12px;
-  font-weight: 300;
-  box-sizing: content-box;
-  padding:10px;
-  border-radius: 10px;
-  width: 60px;
-  position: absolute;
-  right:30px;
-  bottom: 30px;
-  cursor: pointer;
-}
-
-/* Fade In & Out*/
-.login p {
-  cursor: pointer;
-  color:#404040;
-  font-size:15px;
-}
-
-.loginMsg, .signupMsg{
-  /*opacity: 1;*/
-  transition: opacity .8s ease-in-out;
-}
-
-.visibility{
-  opacity: 0;
-}
-
-.hide{
-  display: none;
-}
-
-
-
-/* END RIGHT SIDE CSS LANDING PAGE */
-
-/* BEGIN FOOTER CSS */
-
-.hdr-links {
-  color: orangered;
-}
-
-.footer-font {
-  color: yellow;
-}
-
-
 .footer {
-  position: fixed;
-  bottom: 0px;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  background-color: black;
+    height: 10vh;
 }
+
 
 /* END FOOTER CSS */
 
@@ -579,3 +309,55 @@ bottom: 0;
 background: #fff;
 } */
 
+
+/* BEGIN HEADER CSS */
+/* .fix-search-blue {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(255, 255, 255)) ;
+  height: 100px;  
+  -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  position: fixed;
+  z-index: 1030;
+  width: 100%;
+}
+
+.fix-search-red {
+  background-color: rgb(255, 255, 255);
+  border-bottom: 2px solid black;
+  height: 50px;
+  -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  position: fixed;
+  z-index: 1030;
+  width: 100%;
+}
+ END HEADER CSS 
+
+
+
+
+
+
+BEGIN FOOTER CSS 
+
+.hdr-links {
+  color: orangered;
+}
+
+.footer-font {
+  color: yellow;
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: orangered;
+} */
