@@ -27,14 +27,29 @@ $(document).ready(function() {
 //======================================================//
     $(".btn").on("click", function() {
         event.preventDefault()
+       
+
+        //Create variable for grabbing the value
         var newSearch = $(".search").val().trim();
         console.log(newSearch)
-        getCity(newSearch)
+
+        if (!newSearch) {
+            alert("Please ensure you enter a valid City in the Search Form.");
+            
+        } else {
+            // $(".table").empty()
+            $(".table").attr("style", "display: table")
+            //Fire API
+            getCity(newSearch)
+        }
+        //Fire the API to get the data from db
     })
 
     function getCity(newSearch) {
         $.get("/api/recruiterAgencies/city/" + newSearch, function(data) {
             var addRows = [];
+            //Display Table
+
             for (var i = 0; i < data.length; i++) {
                 addRows.push(createRow(data[i]));
             };
@@ -42,10 +57,14 @@ $(document).ready(function() {
     };
 
     function createRow(recruiterData) {
+
+        //Create Recruiter List
         var recruiterList = $("<tbody>");
         var newTr = $("<tr>");
-        newTr.append("<td>" + "<a href=" + recruiterData.website + ">" + recruiterData.recruiting_agency + "</a>" + "</td>");
-        $(".recruiterSearch").append(newTr)
+        newTr.append("<td>" + recruiterData.id + "</td>").append("<td>" + "<a href=" + recruiterData.website + ">" + recruiterData.recruiting_agency + "</a>" + "</td>");
+
+        //Append table
+        $(".recruiterSearch").append(newTr);
     }
       
 })
