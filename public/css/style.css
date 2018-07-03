@@ -1,3 +1,7 @@
+.fab {
+  padding: 0 5px;
+}
+
 #contactus-success {
   font-style: italic; 
   color: lightgreen;
