@@ -63,6 +63,10 @@ module.exports = function(sequelize, Sequelize) {
       type: Sequelize.STRING,
       allowNull: true
     },
+    resume: {
+      type: Sequelize.STRING,
+      allowNull: true
+    },
     status: {
       type: Sequelize.ENUM('active', 'inactive'),
       defaultValue: 'active'

@@ -13,6 +13,7 @@ var morgan = require('morgan');
 var passport = require('passport');
 var flash    = require('connect-flash');
 var exphbs = require('express-handlebars');
+var fileUpload = require('express-fileupload');
 
 
 
@@ -40,6 +41,7 @@ app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
 app.use(bodyParser.urlencoded({ extended: true }));  // parse application/x-www-form-urlencoded
 app.use(bodyParser.json());  // parse application/json
+app.use(fileUpload());
 //app.set('view engine', 'ejs'); // set up ejs for templating  /  Switched out for handlebars
 
 // Required for passport

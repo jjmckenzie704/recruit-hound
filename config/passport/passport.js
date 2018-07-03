@@ -1,3 +1,4 @@
+ 
   //load bcrypt
   var bCrypt = require('bcrypt-nodejs');
 
@@ -59,7 +60,9 @@
           city: req.body.newcity,
           state: req.body.newstate,
           zip: req.body.newzip,
+          resume: req.body.newresume,
           skill: req.body.skill
+
         };
 
         User.create(data).then(function(newUser,created){
