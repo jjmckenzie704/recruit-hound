@@ -45,7 +45,7 @@ body {
   position: absolute;
   font-family: 'Alegreya Sans SC', sans-serif;
   padding: 20px;
-  font-size: 1.3vw;
+  font-size: 1.6vw;
 }
 
 #logo-header {
@@ -116,7 +116,7 @@ body {
 
 
 .sectionOne {
-  border-radius: 50% 50% 0% 0%;
+  border-radius: 0% 0% 0% 0%;
   background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(154, 193, 196));
   padding: 50px 80px;
   z-index: 25;
@@ -148,10 +148,10 @@ body {
 }
 
 .logoLocation {
-  position: absolute;
+  position: relative;
   width: 300px;
   max-width: 25%;
-  top: 475px;
+  top: -150px;
   height: auto;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -220,7 +220,7 @@ body {
 @media only screen and (max-width: 700px) {
   .logoLocation {
     width: 150px;
-    top: 564px;
+    top: -120px
   }
   .loadingPage-Logo {
     width: 150px;
