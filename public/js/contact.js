@@ -1,5 +1,3 @@
-$(document).ready(function() {
-
 $("#showContactModal").on("click", function () {   // Button to display the contact us modal
     $("#jobseekercontact").attr("style", "display: inline-block");
     $("#recruitercontact").attr("style", "display: inline-block");
@@ -14,9 +12,12 @@ $("#jobseekercontact").on("click", function() {   // Button to display the job s
     $("#recruitercontact").attr("style", "display: none");
     $("#jobseekerform").attr("style", "display: block")
 
-    $(".submitcontact").on("click", function() {   // Button to submit the job seeker contact form
+    $(".submitjobseeker").on("click", function() {   // Button to submit the job seeker contact form
         console.log("Submit has been fired");
         event.preventDefault();
+        // Prevent submitting the form again until the current one finishes
+        $(this).toggleClass('disabled');
+        $(this).prop('disabled', true);
 
         upsertUser({   // Build the userData object
             person_name: $('#contactus-name').val(),
@@ -37,10 +38,21 @@ $("#jobseekercontact").on("click", function() {   // Button to display the job s
                     $('#contactus-message').val('');
                     $('.modal-title').append('');
                     $('#contactus-success').attr('style', 'display: block');   // Display a success message
+                    setTimeout(function() {   // Remove success message and allow a new form submit after 4 seconds
+                        $('#contactus-success').attr('style', 'display: none');
+                        $(".submitjobseeker").toggleClass('disabled');
+                        $(".submitjobseeker").removeAttr('disabled'); 
+                    }, 4000);
                 } else {
                     $('#contactus-error').attr('style', 'display: block');   // Display an error message
+                    setTimeout(function() {   // Remove success message and allow a new form submit after 4 seconds
+                        $('#contactus-error').attr('style', 'display: none');
+                        $(".submitjobseeker").toggleClass('disabled');
+                        $(".submitjobseeker").removeAttr('disabled'); 
+                    }, 4000);
                 }
             })
+
         }
     });
 });
@@ -50,9 +62,12 @@ $("#recruitercontact").on("click", function() {   // Button to display the recru
     $(this).attr("style", "display: none");
     $("#recruiterform").attr("style", "display: block")
 
-    $(".submitcontact").on("click", function() {   // Button to submit the recruiter contact form
+    $(".submitrecruiter").on("click", function() {   // Button to submit the recruiter contact form
         console.log("Submit has been fired");
         event.preventDefault();
+        // Prevent submitting the form again until the current one finishes
+        $(this).toggleClass('disabled');
+        $(this).prop('disabled', true);        
 
         upsertRecruiter({   // Build the recruiterData object
             recruiting_agency: $('#recruiter-company').val(),
@@ -75,12 +90,22 @@ $("#recruitercontact").on("click", function() {   // Button to display the recru
                     $('#recruiter-message').val('');
                     $('.modal-title').append('');
                     $('#contactus-success').attr('style', 'display: block');   // Display a success message
+                    setTimeout(function() {   // Remove success message and allow a new form submit after 4 seconds
+                        $('#contactus-success').attr('style', 'display: none');
+                        $(".submitrecruiter").toggleClass('disabled');
+                        $(".submitrecruiter").removeAttr('disabled'); 
+                    }, 4000);
+                     
                 } else {
                     $('#contactus-error').attr('style', 'display: block');   // Display an error message
+                    setTimeout(function() {   // Remove error message and allow a new form submit after 4 seconds
+                        $('#contactus-error').attr('style', 'display: none');
+                        $(".submitrecruiter").toggleClass('disabled');
+                        $(".submitrecruiter").removeAttr('disabled'); 
+                    }, 4000);
                 }
             })
+          
         }       
     });
 });
-
-})
