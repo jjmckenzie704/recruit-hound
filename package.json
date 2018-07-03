@@ -20,6 +20,7 @@
     "ejs": "^2.3.2",
     "emailjs": "^2.1.0",
     "express": "^4.16.3",
+    "express-fileupload": "^0.4.0",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
     "morgan": "^1.9.0",
