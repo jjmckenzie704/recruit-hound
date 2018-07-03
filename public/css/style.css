@@ -9,7 +9,7 @@
 
 #button {
   position: relative;
-  top: 35px;
+  top: 165px;
   text-align: center;
   padding: 10px;
   display: block;
@@ -48,7 +48,6 @@
   background-size: 1px 200px;
 
   transition: all 0.05s linear;
-  
 }
 
 
@@ -60,6 +59,12 @@
   box-shadow: 2px 2px 2px #777;
   border-bottom: 1px solid orangered;
   transform: translateY(3px);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 
@@ -99,7 +104,7 @@ body {
 .fix-search-red {
   background-color: rgb(255, 255, 255);
   height: 60px;
-  border-bottom: 2px solid orangered;
+  border-bottom: 2px solid rgb(253, 130, 85);
   -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
   -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
   -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
@@ -121,7 +126,7 @@ body {
   left: 10%;
   border-radius: 25px;
   padding: 5px;
-  border: 2px solid orangered;
+  border: 2px solid rgb(253, 130, 85);
 }
 
 #about-header {
@@ -146,16 +151,15 @@ body {
   padding: 5px;
   padding-left: 25px;
   padding-right: 25px;
-  border: 2px solid orangered;
+  border: 2px solid rgb(253, 130, 85);
 }
 
 
 
 .parallax-1 {
   background-image: url("../images/background4.jpg"); 
-  height: 75vh;
+  height: 125vh;
   top: 160px;
-  position: relative;
   background-position: center;
   background-repeat: no-repeat;
   display: block;
@@ -183,6 +187,8 @@ body {
 
 
 .sectionOne {
+  position: relative;
+  top: -400px;
   border-radius: 0% 0% 0% 0%;
   background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(154, 193, 196));
   padding: 50px 80px;
@@ -208,10 +214,11 @@ body {
   display: block;
 }
 
-.ptext .border {
-    background-color: rgb(17, 17, 17);
-    color: #fff;
-    padding: 20px;
+.ptext {
+  position: relative;
+  color: black;
+  padding: 20px;
+  top: 150px;
 }
 
 .logoLocation {
