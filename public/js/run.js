@@ -1,22 +1,8 @@
-
-let $j = jQuery.noConflict();
-
-$j( document ).ready(function() {
-
-
-  
-
-
-    console.log( "ready!" );
-    
-
-
-
-$j(function() {
+$(function() {
     //caches a jQuery object containing the header element
-    let wrap = $j(".wrap");
-    $j(window).scroll(function() {
-        let scroll = $j(window).scrollTop();
+    let wrap = $(".wrap");
+    $(window).scroll(function() {
+        let scroll = $(window).scrollTop();
 
         if (scroll >= 100) {
             console.log(" if - red")
@@ -29,23 +15,19 @@ $j(function() {
 });
 
 
-$j.get("/api/users", function(data) {
+$.get("/api/users", function(data) {
     console.log('Begin displaying all users');
     console.log(data);
     for (key in data) {
         createNewRow(data[key]);
     }
-    $j('.content').html(createNewRow(data[key]));
+    $('.content').html(createNewRow(data[key]));
 });
-
-
-
-
 
 
 function createNewRow(user) {
     console.log("success");
-    let $newUserRow = $j(
+    let $newUserRow = $(
         [
             '<p class="user-block">',
             'First Name: ' + user.firstName + '<br />',
@@ -60,9 +42,7 @@ function createNewRow(user) {
 }
 
 
-$j.get("/api/recruiterAgencies", function(data) {
+$.get("/api/recruiterAgencies", function(data) {
     console.log('Begin displaying all recruiters');
     console.log(data);
-});
-
 });
