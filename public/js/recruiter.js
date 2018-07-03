@@ -1,17 +1,17 @@
 $(document).ready(function() {
     getRecruiters();
     
-    //NO LONGER NEEDED, BUT KEEPING FOR REFERENCE ========== Pull all recruiters//
-        // function getRecruiters() {
-        //     $.get("/api/recruiterAgencies", function(data) {
-        //       var addRows = [];
-        //       for (var i = 0; i < data.length; i++) {
-        //         //createRecruiterRow(data[i])
-        //        addRows.push(createRecruiterRow(data[i]));
-        //       };
-            
-        //     })
-        //   }
+    //Pull all recruiters//
+    function getRecruiters() {
+        $.get("/api/recruiterAgencies", function(data) {
+            var addRows = [];
+            for (var i = 0; i < data.length; i++) {
+            //createRecruiterRow(data[i])
+            addRows.push(createRecruiterRow(data[i]));
+            };
+        
+        })
+        }
 
     
     //NO LONGER NEEDED, BUT KEEPING FOR REFERENCE ========== Create rows to pull all recruiters// 
