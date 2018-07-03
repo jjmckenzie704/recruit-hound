@@ -45,7 +45,7 @@ module.exports = function(app) {
       text:     req.body.message, 
       from:     req.body.email, 
       to:       "Ryan Diaz <ryandiaz@gmail.com>",
-      cc:       "Chad Pilker <chad.pilker@gmail.com>", 
+      cc:       "Chad Pilker <chad.pilker@gmail.com>, jjmckenzie@carolina.rr.com, matthewgeddes@yahoo.com",     
       subject:  "RecruitHound Contact - Job Seeker",
       attachment:
       [
