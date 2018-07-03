@@ -181,37 +181,7 @@
   
   /* END LEFT SIDE CSS LANDING PAGE */
   
-  /* BEGIN RIGHT SIDE CSS LANDING PAGE */
-  
-  .right {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1030;
-    width: 50%;
-  }
-  
-  #RH {
-    font-size: 25px;  
-    border: 2px solid white;
-    border-radius: 100px;
-    padding: 15px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    width: 25%;
-    text-align: center;
-  }
-  
-  .rightSide {
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    background-color: rgb(232,153,0);
-    box-shadow: -5px 0px 5px grey;
-  }
+  /* BEGIN RIGHT SIDE CSS LANDING PAGE */  
   
   .signUp-signIn-location {
     position: absolute;
@@ -261,39 +231,6 @@
   
   .button {
     min-width: 15em;
-  }
-  .arrow {
-    background: #FE5F55;
-  }
-  .arrow:hover {
-    background: #fe2f22;
-  }
-  .arrow:active,
-  .arrow:focus {
-    background: #b90c01;
-  }
-  .arrow:after {
-    content: "\F054";
-  }
-  .arrow:hover:after {
-    -webkit-animation: bounceright .3s alternate ease infinite;
-    animation: bounceright .3s alternate ease infinite;
-  }
-  @-webkit-keyframes bounceright {
-  from {
-    -webkit-transform: translateX(0);
-  }
-  to {
-    -webkit-transform: translateX(3px);
-  }
-  }
-  @keyframes bounceright {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(3px);
-  }
   }
   
   
