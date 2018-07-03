@@ -60,7 +60,7 @@ body {
 #log-in-header {
   right: 5%;
   color: orangered;
-  padding: 12px;
+  padding: 5px;
   padding-left: 25px;
   padding-right: 25px;
   border: 2px solid orangered;
@@ -69,7 +69,7 @@ body {
 
 
 .parallax-1 {
-  background-image: url("../images/background3.jpg"); 
+  background-image: url("../images/background4.jpg"); 
   height: 75vh;
   top: 160px;
   position: relative;
@@ -78,8 +78,6 @@ body {
   display: block;
   z-index: -25;
 }
-
-
 
 
 
@@ -135,8 +133,8 @@ body {
 
 .logoLocation {
   position: relative;
-  max-width: 200px;
-  top: -150px;
+  max-width: 25%;
+  top: -187px;
   height: auto;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -158,21 +156,21 @@ body {
   z-index: 1;
   opacity: 1;
   animation: tie-jump 2000ms;
-  left: 124px;
-  top: 54px;
+  left: 181px;
+  top: 76px;
 }
 
 @keyframes tie-jump {
   0%{
     position: fixed;
-    left: 124px;
+    left: 181px;
     bottom: 0px; 
     height: 0px;
     width: 0px; 
   }
   100%{
-    left: 124px;
-    top: 54px;
+    left: 181px;
+    top: 76px;
   }
 }
 
@@ -206,12 +204,12 @@ body {
 
 .figure{
   position: relative;
-  width: 200px;
+  width: 100%;
   height: auto;
   transition: transform 600ms var(--acc-back);
 }
 
- .figure:hover{
+/* .figure:hover{
    transform: scale(1.05) skewY(-1deg); 
 } 
 
@@ -228,7 +226,7 @@ body {
 .figure:hover :nth-child(3){
   opacity: 1;
   transform: scale(.91);
-}
+} */
 
 @keyframes popInImg{
   0%{
