@@ -1,8 +1,11 @@
+body {
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
 /* BEGIN HEADER CSS */
 .fix-search-blue {
   background: linear-gradient(to top, rgba(34, 30, 30, 0), rgb(255, 255, 255)) ;
   height: 100px;
-  border-bottom: 2px solid grey;
   -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
   -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
   -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
@@ -12,14 +15,53 @@
 
 .fix-search-red {
   background-color: rgb(255, 255, 255);
-  height: 50px;
-  border-bottom: 2px solid grey;
+  height: 60px;
+  border-bottom: 2px solid orangered;
   -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
   -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
   -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
   transition: background-color 0.5s ease-out, height 0.5s ease-out;
   color: #00A0AE;
 }
+
+
+.header-options { 
+  position: absolute;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  padding: 20px;
+  font-size: 1.3vw;
+}
+
+#logo-header {
+  width: 12%;
+  height: auto;
+  left: 10%;
+  border-radius: 25px;
+  padding: 5px;
+  border: 2px solid orangered;
+}
+
+#about-header {
+  right: 50%
+}
+
+#blog-header {
+  right: 40%
+}
+
+#contact-header {
+  right: 30%
+}
+
+#faq-header {
+  right: 20%
+}
+
+#log-in-header {
+  right: 10%
+}
+
+
 
 .parallax-1 {
   background-image: url("../images/background3.jpg"); 
@@ -32,11 +74,14 @@
   z-index: -25;
 }
 
+
+
+
+
 #RH  {
   font-size: 10vh;
   color: #000;
   letter-spacing: 8px;
-  text-transform: uppercase;
   width: 100%;
   text-align: center;
 }
@@ -46,7 +91,6 @@
   font-size: 3vh;
   color: #000;
   letter-spacing: 8px;
-  text-transform: uppercase;
   width: 100%;
   text-align: center;
 }
@@ -61,7 +105,7 @@
 }
 
 .sectionTwo {
-  background: linear-gradient(to top, rgb(255, 255, 255), rgb(154, 193, 196));
+  background: rgb(154, 193, 196);
   padding: 50px 80px;
   z-index: 25;
   border-top: 1px solid rgb(154, 193, 196);
@@ -69,6 +113,7 @@
 
 .parallax-2 {
     height: 75vh;
+    background: rgb(154, 193, 196);
     position: relative;
     background-position: center;
     background-size: cover;
@@ -126,11 +171,7 @@
   }
 }
 
-@import url('https://fonts.googleapis.com/css?family=Lato|Sedgwick+Ave+Display');
-
 :root {
-  --font-display: Muli, sans-serif;
-  --font-sans-serif: 'Lato';
   --box-shadow: drop-shadow(-1px 1px 2px #248391);
   --grad-bright: black;
   --grad-dark: linear-gradient(-55deg, #248391 0%, #8fc2c9 100%);
