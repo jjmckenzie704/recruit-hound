@@ -1,3 +1,15 @@
+#contactus-success {
+  font-style: italic; 
+  color: lightgreen;
+  line-height: 1.5;
+}
+
+#contactus-error {
+  font-style: italic; 
+  color: red;
+  line-height: 1.5;
+}
+
 body {
   font-family: 'Alegreya Sans SC', sans-serif;
 }
@@ -60,7 +72,7 @@ body {
 #log-in-header {
   right: 5%;
   color: orangered;
-  padding: 12px;
+  padding: 5px;
   padding-left: 25px;
   padding-right: 25px;
   border: 2px solid orangered;
@@ -69,7 +81,7 @@ body {
 
 
 .parallax-1 {
-  background-image: url("../images/background3.jpg"); 
+  background-image: url("../images/background4.jpg"); 
   height: 75vh;
   top: 160px;
   position: relative;
@@ -78,8 +90,6 @@ body {
   display: block;
   z-index: -25;
 }
-
-
 
 
 
@@ -117,14 +127,14 @@ body {
 }
 
 .parallax-2 {
-    height: 75vh;
-    background: rgb(154, 193, 196);
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: block;
+  height: 75vh;
+  background: rgb(154, 193, 196);
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: block;
 }
 
 .ptext .border {
@@ -134,9 +144,10 @@ body {
 }
 
 .logoLocation {
-  position: relative;
-  max-width: 200px;
-  top: -150px;
+  position: absolute;
+  width: 300px;
+  max-width: 25%;
+  top: 475px;
   height: auto;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -144,37 +155,112 @@ body {
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  z-index: 1000;
 }
 
+
+
 .loadingPage-Logo {
-  width: 100%;
+  width: 300px;
   height: 100%;
 }
 
+
+
+.tie-location {
+  position: relative;
+  width: 30px;
+  height: 141px;
+  left: 200px;
+  top: 140px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 #tie {
-  position: absolute;
-  width: 10%;
+  width: 30px;
   height: auto;
   z-index: 1;
   opacity: 1;
   animation: tie-jump 2000ms;
-  left: 124px;
-  top: 54px;
 }
 
 @keyframes tie-jump {
   0%{
-    position: fixed;
-    left: 124px;
+    position: relative;
+    left: 15px;
+    top: 75px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     bottom: 0px; 
     height: 0px;
     width: 0px; 
   }
   100%{
-    left: 124px;
-    top: 54px;
+    left: 15px;
+    top: 75px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
+
+@media only screen and (max-width: 700px) {
+  .logoLocation {
+    width: 150px;
+    top: 564px;
+  }
+  .loadingPage-Logo {
+    width: 150px;
+  }
+
+  .tie-location {
+    width: 18px;
+    height: 81px;
+    left: 101px;
+    top: 77px;
+  }
+
+  #tie {
+    width: 16px;
+  }
+
+  @keyframes tie-jump {
+    0%{
+      position: relative;
+      left: 8px;
+      top: 38px;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      bottom: 0px; 
+      height: 0px;
+      width: 0px; 
+    }
+    100%{
+      left: 8px;
+      top: 38px;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+
+}
+
 
 :root {
   --box-shadow: drop-shadow(-1px 1px 2px #248391);
@@ -197,7 +283,6 @@ body {
 
 .shadowed{
   position: absolute;
-  max-width: 300px;
   height: auto;
   animation-delay: var(--delay-base);
   opacity: 0;
@@ -206,12 +291,12 @@ body {
 
 .figure{
   position: relative;
-  width: 200px;
+  width: 100%;
   height: auto;
   transition: transform 600ms var(--acc-back);
 }
 
- .figure:hover{
+/* .figure:hover{
    transform: scale(1.05) skewY(-1deg); 
 } 
 
@@ -228,7 +313,7 @@ body {
 .figure:hover :nth-child(3){
   opacity: 1;
   transform: scale(.91);
-}
+} */
 
 @keyframes popInImg{
   0%{
