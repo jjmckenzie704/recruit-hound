@@ -27,7 +27,7 @@ $(document).ready(function() {
 //======================================================//
     $(".btn").on("click", function() {
         event.preventDefault()
-       
+
 
         //Create variable for grabbing the value
         var newSearch = $(".search").val().trim();
@@ -37,7 +37,8 @@ $(document).ready(function() {
             alert("Please ensure you enter a valid City in the Search Form.");
             
         } else {
-            // $(".table").empty()
+            $(".recruiterBody").html("")
+
             $(".table").attr("style", "display: table")
             //Fire API
             getCity(newSearch)
@@ -64,7 +65,7 @@ $(document).ready(function() {
         newTr.append("<td>" + recruiterData.id + "</td>").append("<td>" + "<a href=" + recruiterData.website + ">" + recruiterData.recruiting_agency + "</a>" + "</td>");
 
         //Append table
-        $(".recruiterSearch").append(newTr);
+        $(".table").append(newTr);
     }
       
 })
