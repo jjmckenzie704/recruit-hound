@@ -115,14 +115,14 @@ body {
 }
 
 .parallax-2 {
-    height: 75vh;
-    background: rgb(154, 193, 196);
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: block;
+  height: 75vh;
+  background: rgb(154, 193, 196);
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: block;
 }
 
 .ptext .border {
@@ -133,9 +133,9 @@ body {
 
 .logoLocation {
   position: absolute;
-  width: 25%;
+  width: 300px;
   max-width: 25%;
-  top: 375px;
+  top: 475px;
   height: auto;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -146,19 +146,20 @@ body {
   z-index: 1000;
 }
 
+
+
 .loadingPage-Logo {
-  width: 100%;
+  width: 300px;
   height: 100%;
 }
 
-#tie {
-  position: absolute;
-  width: 9%;
-  height: auto;
-  z-index: 1;
-  opacity: 1;
-  animation: tie-jump 2000ms;
-  left: 63%;
+
+
+.tie-location {
+  position: relative;
+  width: 30px;
+  height: 141px;
+  left: 200px;
   top: 140px;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -167,11 +168,19 @@ body {
   transform: translate(-50%, -50%);
 }
 
+#tie {
+  width: 30px;
+  height: auto;
+  z-index: 1;
+  opacity: 1;
+  animation: tie-jump 2000ms;
+}
+
 @keyframes tie-jump {
   0%{
-    position: fixed;
-    left: 63%;
-    top: 140px;
+    position: relative;
+    left: 15px;
+    top: 75px;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
@@ -182,8 +191,8 @@ body {
     width: 0px; 
   }
   100%{
-    left: 63%;
-    top: 140px;
+    left: 15px;
+    top: 75px;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
@@ -191,6 +200,55 @@ body {
     transform: translate(-50%, -50%);
   }
 }
+
+@media only screen and (max-width: 700px) {
+  .logoLocation {
+    width: 150px;
+    top: 564px;
+  }
+  .loadingPage-Logo {
+    width: 150px;
+  }
+
+  .tie-location {
+    width: 18px;
+    height: 81px;
+    left: 101px;
+    top: 77px;
+  }
+
+  #tie {
+    width: 16px;
+  }
+
+  @keyframes tie-jump {
+    0%{
+      position: relative;
+      left: 8px;
+      top: 38px;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      bottom: 0px; 
+      height: 0px;
+      width: 0px; 
+    }
+    100%{
+      left: 8px;
+      top: 38px;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+
+}
+
 
 :root {
   --box-shadow: drop-shadow(-1px 1px 2px #248391);
@@ -213,7 +271,6 @@ body {
 
 .shadowed{
   position: absolute;
-  max-width: 300px;
   height: auto;
   animation-delay: var(--delay-base);
   opacity: 0;
