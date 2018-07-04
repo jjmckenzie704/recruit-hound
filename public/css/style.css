@@ -531,6 +531,8 @@ body {
 
 .footer {
     height: 10vh;
+    background: white;
+    border-top: 2px solid orangered;
 }
 
 #social {
