@@ -8,7 +8,7 @@
     --grad-bright: black;
     --grad-dark: linear-gradient(-55deg, #248391 0%, #8fc2c9 100%);
     --fig-width: 380px;
-    --fig-height: 255px;
+    --fig-height: auto;
     --delay-base: 500ms;
     --delay-added: 100ms;
     --acc-back: cubic-bezier(0.175, 0.885, 0.320, 1.275);
@@ -131,29 +131,32 @@
     width: 300px;
     height: 350px;
     display: inline-flex; 
-    margin-top: 3%;
+    margin-top: 15%;
+    padding: 0px;
   }
 
 
   .flex-container {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    align-items: center;
-    justify-content: center;
     height: 100%;
   }
   .row {
     width: 100%;
     margin: 0px;
     height: 400px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    height: 100%;
+    align-items: center;
+    padding: 0;
   }
 
-  .flex-item-dog {
-    display: flex;
-    justify-content: flex-end;
+  #logo-header {
+    width: 131px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 80px;
+    border: 2px solid orangered;
+    padding: 18px;
   }
 
   .frontbox{
