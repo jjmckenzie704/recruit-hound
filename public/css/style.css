@@ -69,19 +69,19 @@
 
 
 a {
-  color: #248391;
+  color: #00A0AE;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
 a:link {
-  color: #248391;
+  color: #00A0AE;
   text-decoration: none;
 }
 
 a:visited {
-  color: #248391;
+  color: #00A0AE;
   text-decoration: none;
 }
 
@@ -395,6 +395,13 @@ body {
 
   .logoLocation {
     left: 43%;
+  }
+
+  #logo-header {
+    position: relative;
+    width: 18%;
+    left: -6%;
+    max-width: 300px;
   }
 }
 
