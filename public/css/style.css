@@ -276,8 +276,6 @@ element.style {
   top: 150px;
   text-align: center;
   margin-bottom: 14px;
-  text-transform: uppercase;
-  
 }
 
 #what-we-do {
@@ -323,7 +321,7 @@ element.style {
   font-size: 14px;
   left: 50%;
   max-width: 400px;
-  top: 80px;
+  top: 56px;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
