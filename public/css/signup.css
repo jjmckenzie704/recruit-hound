@@ -1,10 +1,107 @@
-.skillbutton {
-    color: #333;
-    background-color: #fff;
-    border-color: #ccc;
-    margin: 1px;
+/*Header*/
+h2 {
+    color: #35B729;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
+/*End Personal Input fields*/
+
+
+#usersignup {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+}
+
+
+.form-control {
+    background-color: #f2f2f2;
+    border-radius: 0px;
+    border: 0px;
+    font-size: 12px;
+}
+
+#newstate {
+    height: auto;
+}
+/*End Personal Input fields*/
+
+/*This is for the Upload resume*/
 .custom-file {
     margin-bottom: 1rem;
+}
+.custom-file-input {
+    height: auto;
+    border: 0px;
+    border-radius: 0px;
+    background-color: #f2f2f2;
+    color: #495057;
+    font-size: 12px;
+    width: 100%;
+    padding-bottom: 0px;
+
+}
+
+.custom-file-label {
+    border: 0px;
+    border-radius: 0px;
+    background-color: #f2f2f2;
+    color: #495057;
+    font-size: 12px;
+    width: 100%;
+    padding-bottom: 0px;
+}
+/*End Upload resume*/
+
+/*Skill button CSS*/
+#technologiesWorkWith {
+    text-align: center;
+    width: 100%;
+    color: #35B729;
+    font-size: 18px;
+}
+
+.skillbutton {
+    color: #333;
+    background-color: #f2f2f2;
+    border: 0;
+    border-radius: 0;
+    font-size: 12px;
+}
+
+.btn-group-toggle>.btn, .btn-group-toggle>.btn-group>.btn {
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show>.btn-success.dropdown-toggle {
+    background-color: orangered; 
+}
+
+.btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show>.btn-success.dropdown-toggle {
+    color: #fff;
+    background-color: rgb(253, 130, 85);
+    border-color: rgb(253, 130, 85);
+}
+.btn-success:not(:disabled):not(.disabled).active:focus, .btn-success:not(:disabled):not(.disabled):active:focus, .show>.btn-success.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgb(253,130,85);
+}
+/*End Skill Button CSS*/
+
+/*Submit Button*/
+.submitprofile {
+    width: 100%;
+    background-color: rgb(253, 130, 85);
+    border: 0px;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+
+}
+
+.submitprofile:hover {
+    background-color: orangered
 }

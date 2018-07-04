@@ -82,7 +82,7 @@ $(document).ready(function() {
         var city = $("<p>" + recruiterData.city1 + ", " + recruiterData.state1 + " " + recruiterData.zip_code1 + "</p>");
         var phoneNumber = $("<p>" + recruiterData.number1 + "</p>");
         var email = $("<p>" + recruiterData.email + "</p>")
-        var website = $("<a target='blank' href=" + recruiterData.website + ">" +"<p>" + recruiterData.website + "</p></a>")
+        var website = $("<p><a target='blank' href=" + recruiterData.website + ">" + recruiterData.website + "</a></p>")
 
         //Append Collapsed Info to the Div Body
         collapsedDivBody.append(para).append(contactInfo).append(streetAddress).append(city).append(phoneNumber).append(email).append(website);
