@@ -1,3 +1,7 @@
+body {
+  background: rgb(154, 193, 196);
+}
+
 #contentWrapper {
   width: 90%;
   margin: 0 auto;
@@ -218,10 +222,22 @@ body {
 }
 
 .sectionTwo {
+  position: relative;
   background: rgb(154, 193, 196);
   padding: 50px 80px;
   z-index: 25;
   border-top: 1px solid rgb(154, 193, 196);
+  top: -400px;
+}
+
+.img-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.img-right {
+  float: right;
+  margin-left: 20px;
 }
 
 .parallax-2 {
@@ -236,6 +252,15 @@ body {
 }
 
 .ptext {
+  position: relative;
+  color: black;
+  padding: 20px;
+  top: 150px;
+}
+
+.ptext2 {
+  background-color: white;
+  border-radius: 25px;
   position: relative;
   color: black;
   padding: 20px;
@@ -506,6 +531,8 @@ body {
 
 .footer {
     height: 10vh;
+    background: white;
+    border-top: 2px solid orangered;
 }
 
 #social {
