@@ -148,6 +148,7 @@
     width: 100%;
     margin: 0px;
     height: 400px;
+    justify-content: center;
   }
 
   .flex-item-dog {
