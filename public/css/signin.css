@@ -73,9 +73,6 @@
     transition: transform 600ms var(--acc-back);
   }
   
-   .figure:hover{
-     transform: scale(1.05) skewY(-1deg); 
-  } 
   
   .logoWords{
     transition: transform 600ms var(--acc-back), opacity 600ms ease-in;
@@ -89,15 +86,6 @@
   
   
   
-  .figure:hover :nth-child(1){
-    opacity: 0;
-    transform: scale(.91);
-  }
-  
-  .logoWords:hover :nth-child(n+2){
-    opacity: 1;
-    transform: scale(1);
-  }
   
   @keyframes popInImg{
     0%{
