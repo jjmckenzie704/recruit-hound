@@ -12,7 +12,7 @@ $(function() {
             console.log(" else - blue")
             wrap.removeClass("fix-search-red").addClass('fix-search-blue');
         }
-        if (scroll >= 830) {
+        if (scroll >= 750) {
             console.log(" if - gone")
             orangeBorder.removeClass('what-we-do-bottom-border1').addClass("what-we-do-bottom-border2");
         } else {
