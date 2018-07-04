@@ -61,7 +61,7 @@ body {
 
 #create-profile-button:active {
   box-shadow: 2px 2px 2px #777;
-  border-bottom: 1px solid orangered;
+  /* border-bottom: 1px solid orangered; */
   transform: translateY(3px);
   left: 50%;
   /* -webkit-transform: translate(-50%, -50%);
@@ -219,7 +219,7 @@ body {
 }
 
 #slogan {
-  font-size: 55px;
+  font-size: 50px;
   font-family: 'Open Sans', sans-serif;
 }
 
