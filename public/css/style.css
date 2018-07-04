@@ -683,10 +683,11 @@ element.style {
 
 .modal-open .modal {
   position: absolute;
-  top: 38%;
+  top: 37%;
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: visible;
+  min-width: 360px;
 }
 
 .btn-primary.disabled, .btn-primary:disabled, .btn-primary, .btn-primary:hover, .btn-primary.focus, .btn-primary:focus {
