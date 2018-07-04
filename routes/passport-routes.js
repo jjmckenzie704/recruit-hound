@@ -5,7 +5,7 @@ module.exports = function(app, passport) {
 
     app.post('/signup', passport.authenticate('local-signup', {
         successRedirect: '/dashboard',
-        failureRedirect: '/fail'
+        failureRedirect: '/signup'
     }));
 
     app.get('/signin', function(req, res) {

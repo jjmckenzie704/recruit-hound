@@ -91,12 +91,10 @@ a:visited {
 
 a:hover {
   color: rgb(253, 130, 85);
-  text-decoration: underline;
 }
 
 a:active {
   color: rgb(253, 130, 85);
-  text-decoration: underline;
 }
 
 .fab {
@@ -141,33 +139,52 @@ body {
   color: #00A0AE;
 }
 
+.navbar-brand {
+  font-family: sans-serif;
+}
 
-.header-options { 
-  position: absolute;
-  font-family: 'Alegreya Sans SC', sans-serif;
-  padding: 20px;
-  font-size: 2.3vw;
+.nav-item {
+  outline: none;
+}
+
+.nav-item:focus, .nav-item:active, a:focus, a:active {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
 }
 
 #logo-header {
-  width: 12%;
-  height: auto;
-  left: 10%;
-  border-radius: 25px;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
   padding: 5px;
+  border: 2px solid rgb(253, 130, 85);
+  margin-right: 5px;
+}
+
+.main-menu-links, .login-link {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  font-family: Segoe UI Symbol;
+}
+
+.main-menu-links:hover {
+  color: orangered;
+  text-decoration: none;
+}
+
+.login-link {
+  color: orangered;
+  padding: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
   border: 2px solid rgb(253, 130, 85);
 }
 
-#about-header {
-  right: 43%
-}
-
-#blog-header {
-  right: 33%
-}
-
-#contact-header {
-  right: 20%
+.login-link:hover {
+  text-decoration: none;
+  color: white;
+  background: rgb(253, 130, 85);
 }
 
 #log-in-header {
@@ -422,12 +439,6 @@ body {
     left: 43%;
   }
 
-  #logo-header {
-    position: relative;
-    width: 18%;
-    left: -6%;
-    max-width: 300px;
-  }
 }
 
 
