@@ -119,6 +119,13 @@ body {
   font-family: 'Alegreya Sans SC', sans-serif;
 }
 
+.about {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+  margin: 25px;
+  padding: 25px;
+}
+
 /* BEGIN HEADER CSS */
 .fix-search-blue {
   background: linear-gradient(to top, rgba(34, 30, 30, 0), rgb(255, 255, 255)) ;
@@ -428,6 +435,11 @@ body {
     left: -6%;
     max-width: 300px;
   }
+
+  .sectionTwo {
+    top: -220px;
+  }
+
 }
 
 
