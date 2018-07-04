@@ -68,7 +68,32 @@
 }
 
 
+a {
+  color: #248391;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
 
+a:link {
+  color: #248391;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #248391;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(253, 130, 85);
+  text-decoration: underline;
+}
+
+a:active {
+  color: rgb(253, 130, 85);
+  text-decoration: underline;
+}
 
 .fab {
   padding: 0 5px;
@@ -117,7 +142,7 @@ body {
   position: absolute;
   font-family: 'Alegreya Sans SC', sans-serif;
   padding: 20px;
-  font-size: 1.6vw;
+  font-size: 2.3vw;
 }
 
 #logo-header {
@@ -130,18 +155,14 @@ body {
 }
 
 #about-header {
-  right: 50%
+  right: 43%
 }
 
 #blog-header {
-  right: 40%
+  right: 33%
 }
 
 #contact-header {
-  right: 30%
-}
-
-#faq-header {
   right: 20%
 }
 
@@ -158,7 +179,7 @@ body {
 
 .parallax-1 {
   background-image: url("../images/background4.jpg"); 
-  height: 125vh;
+  height: 1000px;
   top: 160px;
   background-position: center;
   background-repeat: no-repeat;
@@ -335,8 +356,46 @@ body {
       transform: translate(-50%, -50%);
     }
   }
+  #RH  {
+    font-size: 4vh;
+  }
 
+  .header-options { 
+    font-size: 4vw;
+  }
 
+  #about-header {
+    right: 61%
+  }
+  
+  #blog-header {
+    right: 46%
+  }
+  
+  #contact-header {
+    right: 27%
+  }
+  
+
+  #RH-message {
+    font-size: 2vh;
+  }
+
+  #button {
+    width: 135px;
+    font-size: 15px;
+  }
+
+  .sectionOne {
+    top: -220px;
+  }
+  .parallax-1 {
+    height: 680px;
+  }
+
+  .logoLocation {
+    left: 43%;
+  }
 }
 
 
