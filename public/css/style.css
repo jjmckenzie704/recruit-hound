@@ -273,9 +273,14 @@ element.style {
   position: relative;
   color: black;
   padding: 20px;
-  top: 150px;
+  top: 0px;
   text-align: center;
   margin-bottom: 14px;
+}
+
+.profile-sections {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #what-we-do {
@@ -285,6 +290,7 @@ element.style {
 }
 
 .what-we-do-bottom-border1 {
+  font-weight: normal;
   position: relative;
   border-bottom: 3px solid orange;
   left: 50%;
@@ -301,6 +307,7 @@ element.style {
 }
 
 .what-we-do-bottom-border2 {
+  font-weight: normal;
   position: relative;
   border-bottom: 3px solid orange;
   left: 50%;
@@ -316,17 +323,40 @@ element.style {
   transition: width 0.5s linear;
 }
 
-#what-we-do-message {
+.what-we-do-message1 {
   position: relative;
   font-size: 14px;
   left: 50%;
   max-width: 400px;
   top: 56px;
+  opacity: 0;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.5s linear;
+  -moz-transition: opacity 0.5s linear;
+  -o-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+}
+
+.what-we-do-message2 {
+  position: relative;
+  font-size: 14px;
+  left: 50%;
+  max-width: 400px;
+  top: 56px;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.5s linear;
+  -moz-transition: opacity 0.5s linear;
+  -o-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
 }
 
 .logoLocation {
