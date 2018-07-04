@@ -1,5 +1,5 @@
 body {
-  background: rgb(154, 193, 196);
+  background: white;
 }
 
 #contentWrapper {
@@ -247,7 +247,7 @@ body {
 
 .sectionTwo {
   position: relative;
-  background: rgb(154, 193, 196);
+  background: linear-gradient(to top, white, rgb(154, 193, 196));
   padding: 50px 80px;
   z-index: 25;
   border-top: 1px solid rgb(154, 193, 196);
@@ -293,6 +293,7 @@ element.style {
   top: 0px;
   text-align: center;
   margin-bottom: 14px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .profile-sections {
@@ -653,7 +654,6 @@ element.style {
 .footer {
     height: 10vh;
     background: white;
-    border-top: 2px solid orangered;
 }
 
 #social {
@@ -662,6 +662,19 @@ element.style {
   width: 40px;
 }
 
+.modal-open .modal {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: visible;
+}
+
+.btn-primary.disabled, .btn-primary:disabled, .btn-primary, .btn-primary:hover, .btn-primary.focus, .btn-primary:focus {
+  color: #fff;
+  background-color: rgb(253, 130, 85);
+  border-color: rgb(253, 130, 85);
+}
 
 /* END FOOTER CSS */
 
