@@ -61,7 +61,7 @@ body {
 
 #create-profile-button:active {
   box-shadow: 2px 2px 2px #777;
-  border-bottom: 1px solid orangered;
+  border-bottom: 4px solid orangered;
   transform: translateY(3px);
   left: 50%;
   /* -webkit-transform: translate(-50%, -50%);
@@ -80,12 +80,10 @@ a {
 }
 
 a:link {
-  color: orangered;
   text-decoration: none;
 }
 
 a:visited {
-  color: #00A0AE;
   text-decoration: none;
 }
 
@@ -214,15 +212,19 @@ body {
   height: 40%;
 }
 
+.flex-item {
+  text-align: center;
+}
+
 #company-name {
-  font-size: 72px;
+  font-size: 80px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   margin: 0 0 -29px 0;
 }
 
 #slogan {
-  font-size: 55px;
+  font-size: 39px;
   font-family: 'Open Sans', sans-serif;
 }
 
