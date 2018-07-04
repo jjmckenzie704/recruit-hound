@@ -15,6 +15,12 @@
   }
   
 
+  html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
   #logo-top {
     z-index: 2;
     animation: popInImg2 500ms var(--acc-back) 1 forwards;
@@ -69,6 +75,8 @@
     width: var(--fig-width);
     height: var(--fig-height);
     transition: transform 600ms var(--acc-back);
+    display: flex;
+    justify-content: flex-end;
   }
   
   @keyframes popInImg{
@@ -123,12 +131,28 @@
     width: 300px;
     height: 350px;
     display: inline-flex; 
+    margin-top: 3%;
   }
 
 
-  .flex-container > div {
+  .flex-container {
     display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    align-items: center;
     justify-content: center;
+    height: 100%;
+  }
+  .row {
+    width: 100%;
+    margin: 0px;
+    height: 400px;
+  }
+
+  .flex-item-dog {
+    display: flex;
+    justify-content: flex-end;
   }
 
   .frontbox{
@@ -138,8 +162,7 @@
     width: 100%;
     z-index: 10;
     position: absolute;
-    margin-right: 3%;
-    margin-left: 3%;
+    margin: auto;
     transition: right .8s ease-in-out;
   }
   
