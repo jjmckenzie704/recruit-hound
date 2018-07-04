@@ -1,11 +1,35 @@
 
-  /* BEGIN LEFT SIDE CSS LANDING PAGE */
-    
+  @import url('https://fonts.googleapis.com/css?family=Lato|Sedgwick+Ave+Display');
+  
+  :root {
+    --font-display: Muli, sans-serif;
+    --font-sans-serif: 'Lato';
+    --box-shadow: drop-shadow(-5px 5px 4px #248391);
+    --grad-bright: black;
+    --grad-dark: linear-gradient(-55deg, #248391 0%, #8fc2c9 100%);
+    --fig-width: 380px;
+    --fig-height: 255px;
+    --delay-base: 500ms;
+    --delay-added: 100ms;
+    --acc-back: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  }
+  
+
+  #logo-top {
+    z-index: 2;
+    animation: popInImg2 500ms var(--acc-back) 1 forwards;
+  }
+  
+  #logo-bottom {
+    filter: var(--box-shadow); 
+    animation: popInImg 1500ms var(--acc-back) 1 forwards;
+  }
+
   .loadingPage-Logo {
     width: 150px;
     height: 150px;
   }
-  
+
   #tie {
     position: absolute;
     width: 10%;
@@ -30,37 +54,11 @@
       top: 93px;  
     }
   }
-  
-  @import url('https://fonts.googleapis.com/css?family=Lato|Sedgwick+Ave+Display');
-  
-  :root {
-    --font-display: Muli, sans-serif;
-    --font-sans-serif: 'Lato';
-    --box-shadow: drop-shadow(-5px 5px 4px #248391);
-    --grad-bright: black;
-    --grad-dark: linear-gradient(-55deg, #248391 0%, #8fc2c9 100%);
-    --fig-width: 380px;
-    --fig-height: 255px;
-    --delay-base: 500ms;
-    --delay-added: 100ms;
-    --acc-back: cubic-bezier(0.175, 0.885, 0.320, 1.275);
-  }
-  
-  #logo-top {
-    z-index: 2;
-    animation: popInImg2 500ms var(--acc-back) 1 forwards;
-  }
-  
-  #logo-bottom {
-    filter: var(--box-shadow); 
-    animation: popInImg 1500ms var(--acc-back) 1 forwards;
-  }
-  
+
   .shadowed{
     position: absolute;
     width: 100%;
     height: auto;
-    
     animation-delay: var(--delay-base);
     opacity: 0;
     transform: skewY(1deg);
@@ -72,20 +70,6 @@
     height: var(--fig-height);
     transition: transform 600ms var(--acc-back);
   }
-  
-  
-  .logoWords{
-    transition: transform 600ms var(--acc-back), opacity 600ms ease-in;
-    height: inherit;
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100%; 
-    height: 100%;
-  }
-  
-  
-  
   
   @keyframes popInImg{
     0%{
@@ -111,19 +95,6 @@
     }
   }
   
-  .logoWords span{
-    position: absolute;
-    display: block;
-    background: var(--grad-bright);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: var(--font-sans-serif);
-    transform: skewY(-13deg);
-    text-shadow: var(--box-shadow);
-    animation: popIn 600ms var(--acc-back) 1 forwards;
-    opacity: 0;
-  }
-  
   @keyframes popIn{
     0%,13%{
       transform: scaleX(.89) scaleY(.75);
@@ -135,28 +106,6 @@
     }
   }
   
-  .logoWords span:nth-of-type(1){
-    top: -100px; left: -100px;
-    font-size: 89px;
-    animation-delay: calc(var(--delay-base) + 1 * var(--delay-added));
-  }
-  
-  .logoWords span:nth-of-type(2){
-    top: -72px; 
-    left: 100px;
-    font-size: 44px;
-    font-family: var(--font-display);
-    /* animation-delay: calc(var(--delay-base) + 2 * var(--delay-added)); */
-  }
-  
-  .logoWords span:nth-of-type(3){
-      top: -70px;
-      left: -89px;
-      font-size: 55px;
-    font-family: var(--font-display);
-    /* animation-delay: calc(var(--delay-base) + 2 * var(--delay-added)); */
-  }
-  
   
   @media screen and (max-width: 539px){
     .figure{
@@ -166,139 +115,39 @@
       height: auto;
     }
   }
+ 
   
-  /* END LEFT SIDE CSS LANDING PAGE */
-  
-  /* BEGIN RIGHT SIDE CSS LANDING PAGE */  
-  
-  .signUp-signIn-location {
-    position: absolute;
-    width: 45%;
-    height: 45%;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    font: 14px/1.21 Roboto, 'Helvetica Neue', arial, helvetica, sans-serif;
-  }
-  
-  .button {
-    display: inline-block;
-    font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    position: relative;
-    padding: .8em 1.4em;
-    padding-right: 4.7em;
-    background: #009ED8;
-    border: none;
-    color: white;
-    transition: .2s;
-  }
-  .button:before,
-  .button:after {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    padding-top: inherit;
-    padding-bottom: inherit;
-    width: 2.8em;
-    content: "\00a0";
-    font-family: 'FontAwesome', sans-serif;
-    font-size: 1.2em;
-    text-align: center;
-    transition: .2s;
-    transform-origin: 50% 60%;
-  }
-  .button:before {
-    background: rgba(0, 0, 0, 0.1);
-  }
-  
-  .button {
-    min-width: 15em;
-  }
-  
-  
-  
-  .container{
+  .container {
     /*border:1px solid white;*/
-    width: 600px;
+    position: relative;
+    width: 300px;
     height: 350px;
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
     display: inline-flex; 
   }
-  .backbox{  
-    background-color: #404040;
-    width: 100%;
-    height: 80%;
-    position: absolute;
-    transform: translate(0,-50%);
-    top:50%;
-    display: inline-flex;
+
+
+  .flex-container > div {
+    display: flex;
+    justify-content: center;
   }
-  
+
   .frontbox{
     background-color: white;
     border-radius: 20px;
     height: 100%;
-    width: 50%;
+    width: 100%;
     z-index: 10;
     position: absolute;
-    right:0;
     margin-right: 3%;
     margin-left: 3%;
     transition: right .8s ease-in-out;
   }
   
-  .moving{
-    right:45%;
-  }
-  
-  .loginMsg, .signupMsg{
-    width: 50%;
-    height: 100%;
-    font-size: 15px;
-    box-sizing: border-box;
-  }
-  
-  .loginMsg .title,
-  .signupMsg .title{
-    font-weight: 300;
-    font-size: 23px;
-  }
-  
-  .loginMsg p,
-  .signupMsg p {
-    font-weight: 100;
-  }
-  
-  .textcontent{
-    color:white;
-    margin-top:65px;
-    margin-left: 12%;
-  }
-  
-  .loginMsg button,
-  .signupMsg button {
-    background-color: #404040;
-    border: 2px solid white;
-    border-radius: 10px;
-    color:white;
-    font-size: 12px;
-    box-sizing: content-box;
-    font-weight: 300;
-    padding:10px;
-    margin-top: 20px;
-  }
+
+
   
   /* front box content*/
-  .login, .signup{
+  .login {
     padding: 20px;
     text-align: center;
   }
@@ -309,7 +158,7 @@
     font-size:22px;
   }
   
-  .inputbox{
+  .inputbox {
     margin-top:30px; 
   }
   .login input, 
@@ -384,69 +233,5 @@
     background-color: black;
   }
   
-  /* END FOOTER CSS */
-  
-  /* 
-  html, body {
-  }
-  form {
-  } */
-  
-  
-  
-  
-  /* 
-  .ptext .border {
-    background-color: rgb(17, 17, 17);
-    color: #fff;
-    padding: 20px;
-  }
-  .ptext {
-    text-align: center;
-    color: #000;
-    font-size: 27px;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-  }
-  .section {
-    text-align: center;
-    padding: 50px 80px;
-    background-color: #f4f4f4;
-    color: #666;
-  }
-  /* 
-  .parallax-1 {
-    background-image: url("../images/background2.jpg"); 
-    height: 75vh;
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: block;
-  }
-  .parallax-2 {
-    background-image: url("../images/background2.jpg"); 
-    height: 75vh;
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: block;
-  } */
-  
-  
-  /* 
-  .ld-page {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #fff;
-  } */
+
   
