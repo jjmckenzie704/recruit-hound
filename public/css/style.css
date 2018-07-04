@@ -525,7 +525,22 @@ element.style {
     top: -220px;
   }
 
-}
+  #what-we-do {
+    letter-spacing: 1.9px;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .what-we-do-bottom-border2 {
+    width: 145px;
+  }
+
+  .what-we-do-message2 {
+    font-size: 12px;
+    top: 90px;
+  }
+
+} /* <-----MEDIA QUERY END --- */
 
 
 :root {
