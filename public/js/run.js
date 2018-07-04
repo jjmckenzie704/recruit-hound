@@ -1,7 +1,8 @@
 $(function() {
     //caches a jQuery object containing the header element
     let wrap = $(".wrap");
-    let orangeBorder = $('#border-what')
+    let orangeBorder = $('#border-what');
+    let message = $('#what-we-do-message');
     $(window).scroll(function() {
         let scroll = $(window).scrollTop();
 
@@ -12,12 +13,19 @@ $(function() {
             console.log(" else - blue")
             wrap.removeClass("fix-search-red").addClass('fix-search-blue');
         }
-        if (scroll >= 750) {
+        if (scroll >= 350) {
             console.log(" if - gone")
             orangeBorder.removeClass('what-we-do-bottom-border1').addClass("what-we-do-bottom-border2");
         } else {
             console.log(" else - orange")
             orangeBorder.removeClass("what-we-do-bottom-border2").addClass('what-we-do-bottom-border1');
+        }
+        if (scroll >= 450) {
+            console.log(" if - gone")
+            message.removeClass('what-we-do-message1').addClass("what-we-do-message2");
+        } else {
+            console.log(" else - orange")
+            message.removeClass("what-we-do-message2").addClass('what-we-do-message1');
         }
     });
 });
