@@ -127,16 +127,16 @@ h2 {
     margin-right: 5px;
 }
 
-.btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show>.btn-success.dropdown-toggle {
+.btn:not(:disabled):not(.disabled).active, .btn:not(:disabled):not(.disabled):active, .show>.btn.dropdown-toggle {
     background-color: orangered; 
 }
 
-.btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show>.btn-success.dropdown-toggle {
+.btn:not(:disabled):not(.disabled).active, .btn:not(:disabled):not(.disabled):active, .show>.btn.dropdown-toggle {
     color: #fff;
     background-color: rgb(253, 130, 85);
     border-color: rgb(253, 130, 85);
 }
-.btn-success:not(:disabled):not(.disabled).active:focus, .btn-success:not(:disabled):not(.disabled):active:focus, .show>.btn-success.dropdown-toggle:focus {
+.btn:not(:disabled):not(.disabled).active:focus, .btn:not(:disabled):not(.disabled):active:focus, .show>.btn.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgb(253,130,85);
 }
 /*End Skill Button CSS*/
@@ -154,4 +154,8 @@ h2 {
 
 .submitprofile:hover {
     background-color: orangered
+}
+
+.focus {
+    box-shadow: none!important;
 }
