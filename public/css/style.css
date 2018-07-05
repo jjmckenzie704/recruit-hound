@@ -649,7 +649,8 @@ element.style {
   border-color: rgb(253, 130, 85);
 }
 
-#recruitercontact {
+
+#recruitercontact, #jobseekercontact {
   width: 49%;
 }
 
