@@ -1,6 +1,24 @@
 body, html {
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    max-width: 1000px;
+}
+
+.profile-form {
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+    margin-top: 35px;
 }
 
 .parent {
