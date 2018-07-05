@@ -299,6 +299,8 @@ element.style {
   border-bottom: 3px solid orange;
   left: 50%;
   width: 225px;
+  margin-bottom: 10px;
+
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
