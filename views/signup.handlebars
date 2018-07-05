@@ -143,15 +143,17 @@
                     <input type="file" class="custom-file-input" id="newresume" name="newresume">
                     <label class="custom-file-label" for="newresume">Upload Resume</label>
                 </div>
-                <div class="form-group">
+                <div class="form-group" id="skills-container">
                     <label id="technologiesWorkWith" for="skills-block">What technologies do you work with?</label>
                     <div class="btn-group-toggle" data-toggle="buttons" id="skills-block">
                         <!-- Begin list of skills -->
                     </div>
                 </div>
             </div>
-            <input type="hidden" id="skill" name="skill" value="">
-            <input type="submit" class="btn btn-primary submitprofile" value="Create My Profile">
+            <div class="form-row" id="submit-btn-container">
+                <input type="hidden" id="skill" name="skill" value="">
+                <input type="submit" class="btn btn-primary submitprofile" value="Create My Profile">
+            </div>
         </form>
     </div>
 </div>

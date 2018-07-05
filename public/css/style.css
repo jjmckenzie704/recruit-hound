@@ -644,7 +644,7 @@ element.style {
 
 .btn-primary.disabled, .btn-primary:disabled, .btn-primary, .btn-primary:hover, .btn-primary.focus, .btn-primary:focus {
   color: #fff;
-  width: 49%;
+  max-width: 479px;
   background-color: rgb(253, 130, 85);
   border-color: rgb(253, 130, 85);
 }
