@@ -159,3 +159,10 @@ h2 {
 .focus {
     box-shadow: none!important;
 }
+
+/*Media queries options*/
+@media screen and (max-width:768px) {
+    #signupbody {
+        padding-top: 225px!important;
+    }
+}
