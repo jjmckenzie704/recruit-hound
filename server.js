@@ -15,13 +15,6 @@ var flash    = require('connect-flash');
 var exphbs = require('express-handlebars');
 var fileUpload = require('express-fileupload');
 
-
-
-
-
-
-
-
 // Sets up the Express App
 // =============================================================
 var app = express();
