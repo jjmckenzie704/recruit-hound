@@ -22,6 +22,19 @@ html, body{
   background-color: #F9F9F9;
 }
 
+#signinbody {
+  padding-top: 75px!important;
+}
+
+.signin-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  max-width: 1000px;
+}
+
 #logo-signin {
   width: 95px;
   height: 95px;

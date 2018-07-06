@@ -1,81 +1,38 @@
-body, html {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+body {
+  background-color: #f9f9f9;
 }
 
-#signupbody {
-    padding-top: 75px!important;
+.dashboard-body {
+    padding-top: 75px;
 }
 
-.statusmessage {
-    text-align: center;
-    font-style: italic;
-    color: red;
-}
-
-.profile-content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    max-width: 1000px;
-}
-
-.profile-form {
+/*Header styling*/
+#agency-search {
     background-color: white;
+    padding: 15px;
+    margin-bottom: 5px;
     border-radius: 20px;
-    border: 1px solid lightgray;
-    margin-top: 35px;
 }
-
-#skills-container {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.parent {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-    max-width: 600px;
-    justify-content: center;
-    margin: auto;
-}
-
 /*Header*/
-h2 {
+#editheader {
     color: #35B729;
     font-size: 22px;
     margin-bottom: 15px;
     text-align: center;
 }
 
-/*End Personal Input fields*/
+.img-thumbnail {
+    border: 1px solid rgb(253,130,85);
+    background-color: #f9f9f9;
+    padding: 5px;
+}
 
-
-#usersignup {
-    background-color: white;
+/*Personal Info Style*/
+#portfolio_info {
     padding: 15px;
     margin-bottom: 5px;
     border-radius: 20px;
-}
-
-#logo-header {
-    width: 131px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 80px;
-    border: 2px solid orangered;
-    padding: 18px;
-}
-.container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
+} 
 
 .form-control {
     background-color: #f2f2f2;
@@ -102,7 +59,6 @@ h2 {
     font-size: 12px;
     width: 100%;
     padding-bottom: 0px;
-
 }
 
 .custom-file-label {
@@ -116,12 +72,15 @@ h2 {
 }
 /*End Upload resume*/
 
+
+
 /*Skill button CSS*/
-#technologiesWorkWith {
+#skills-container {
     text-align: center;
     width: 100%;
     color: #35B729;
     font-size: 18px;
+    margin: 15px 0px 15px 0px;
 }
 
 .skillbutton {
@@ -152,17 +111,17 @@ h2 {
 /*End Skill Button CSS*/
 
 /*Submit Button*/
-.submitprofile {
+.saveprofile {
     width: 100%;
     background-color: rgb(253, 130, 85);
     border: 0px;
     font-weight: bold;
     font-size: 16px;
     color: white;
-    margin: 0 auto;
+    margin: auto;
 }
 
-.submitprofile:hover {
+.saveprofile:hover {
     background-color: orangered
 }
 
@@ -170,7 +129,80 @@ h2 {
     box-shadow: none!important;
 }
 
-/*Media queries options*/
-@media screen and (max-width:768px) {
-
+/*Agency Div*/
+#agency_info {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    
 }
+
+/*Agency Locate*/
+.agency-locate {
+    width: 100%;
+    margin-bottom: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+#search-input {
+    background-color: #f2f2f2;
+    border-radius: 0px;
+    border: 0px;
+    font-size: 12px;
+    width: 75%;
+    margin: none;
+}
+
+#search-button {
+    width: 20%;
+    margin: auto;
+    border: 0px;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+
+#search-button:focus {
+    box-shadow: 0 0 0 0.2rem rgb(253,130,85);
+}
+
+#search-button:hover {
+    background-color: orangered
+}
+
+/*CSS for Accordion Widget*/
+.recruiter-return-info {
+    padding: 5px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+#accordion-header {
+    color: #35B729;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+    width:100%;
+}
+
+.card {
+    border: 1px solid rgb(253, 130, 85);
+}
+
+.card button {
+    height: auto;
+    border: 0px;
+    border-radius: 0px;
+    background-color: #f2f2f2;
+    color: #495057;
+    font-size: 12px;
+    width: 100%;
+    padding: 5px;
+}
+
+.card button:hover {
+    background-color: #f2f2f2;
+}
+

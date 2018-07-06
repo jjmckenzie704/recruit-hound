@@ -12,6 +12,7 @@
   
   .nav-item {
     outline: none;
+    padding: 3px 0;
   }
   
   .nav-item:focus, .nav-item:active, a:focus, a:active {

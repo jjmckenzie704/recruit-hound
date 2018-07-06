@@ -36,6 +36,7 @@
 
     function(req, email, password, done){
       console.log(req.body);
+      console.log("passport.js has fired!");
       var generateHash = function(password) {
       return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
       };
@@ -44,7 +45,7 @@
 
       if(user)
       {
-        return done(null, false, {message : 'That email is already taken'} );
+        return done(null, false, req.flash('statusMessage', 'That email is already taken'));
       }
 
       else

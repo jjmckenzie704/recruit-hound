@@ -61,7 +61,7 @@ body {
 
 #create-profile-button:active {
   box-shadow: 2px 2px 2px #777;
-  border-bottom: 4px solid orangered;
+  border-bottom: 1px solid orangered;
   transform: translateY(3px);
   left: 50%;
   /* -webkit-transform: translate(-50%, -50%);
@@ -80,10 +80,12 @@ a {
 }
 
 a:link {
+  color: orangered;
   text-decoration: none;
 }
 
 a:visited {
+  color: #00A0AE;
   text-decoration: none;
 }
 
@@ -144,7 +146,62 @@ body {
   color: #00A0AE;
 }
 
+.navbar-brand {
+  font-family: sans-serif;
+}
 
+.nav-item {
+  outline: none;
+}
+
+.nav-item:focus, .nav-item:active, a:focus, a:active {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+}
+
+#logo-header {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  padding: 5px;
+  border: 2px solid rgb(253, 130, 85);
+  margin-right: 5px;
+}
+
+.main-menu-links, .login-link {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  font-family: Segoe UI Symbol;
+}
+
+.main-menu-links:hover {
+  color: orangered;
+  text-decoration: none;
+}
+
+.login-link {
+  color: orangered;
+  padding: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 2px solid rgb(253, 130, 85);
+}
+
+.login-link:hover {
+  text-decoration: none;
+  color: white;
+  background: rgb(253, 130, 85);
+}
+
+#log-in-header {
+  right: 5%;
+  color: orangered;
+  padding: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 2px solid rgb(253, 130, 85);
+}
 
 
 
@@ -157,19 +214,15 @@ body {
   height: 40%;
 }
 
-.flex-item {
-  text-align: center;
-}
-
 #company-name {
-  font-size: 80px;
+  font-size: 72px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   margin: 0 0 -29px 0;
 }
 
 #slogan {
-  font-size: 39px;
+  font-size: 55px;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -227,10 +280,19 @@ element.style {
   box-shadow: 3px 3px 2px rgb(253, 130, 85);
 }
 
-.profile-pics {
+.picture-text {
+  width: 100%;
   max-width: 200px;
+  margin: auto;
+}
+
+.profile-pics {
+  width: 100%;
+  max-width: 300px;
   height: auto;
   border-radius: 25%;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .parallax-2 {
@@ -299,8 +361,6 @@ element.style {
   border-bottom: 3px solid orange;
   left: 50%;
   width: 225px;
-  margin-bottom: 10px;
-
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
@@ -313,11 +373,12 @@ element.style {
 }
 
 .what-we-do-message1 {
+  
   position: relative;
   font-size: 14px;
   left: 50%;
   max-width: 400px;
-  top: 56px;
+  top: 90px;
   opacity: 0;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -335,7 +396,7 @@ element.style {
   font-size: 14px;
   left: 50%;
   max-width: 400px;
-  top: 56px;
+  top: 75px;
   opacity: 1;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -425,6 +486,14 @@ element.style {
   }
   .loadingPage-Logo {
     width: 150px;
+  }
+
+  .picture-text {
+    max-width: 200px;
+  }
+
+  .profile-pics {
+    max-width: 200px;
   }
 
   .tie-location {
@@ -518,7 +587,7 @@ element.style {
   }
 
   .what-we-do-message2 {
-    font-size: 12px;
+    font-size: 14px;
     top: 90px;
   }
 
@@ -644,14 +713,8 @@ element.style {
 
 .btn-primary.disabled, .btn-primary:disabled, .btn-primary, .btn-primary:hover, .btn-primary.focus, .btn-primary:focus {
   color: #fff;
-  max-width: 479px;
   background-color: rgb(253, 130, 85);
   border-color: rgb(253, 130, 85);
-}
-
-
-#recruitercontact, #jobseekercontact {
-  width: 49%;
 }
 
 /* END FOOTER CSS */
