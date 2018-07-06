@@ -1,21 +1,5 @@
-$(document).ready(function(result) {
-    
-    console.log(result.email)
+$(document).ready(function() {
 
-    
-    getRecruiters();
-    
-    //Pull all recruiters//
-    function getRecruiters() {
-        $.get("/api/recruiterAgencies", function(data) {
-            var addRows = [];
-            for (var i = 0; i < data.length; i++) {
-            //createRecruiterRow(data[i])
-            addRows.push(createRecruiterRow(data[i]));
-            };
-        
-        })
-        }
 
     
     //NO LONGER NEEDED, BUT KEEPING FOR REFERENCE ========== Create rows to pull all recruiters// 

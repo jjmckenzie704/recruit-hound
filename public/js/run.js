@@ -93,9 +93,3 @@ function createNewRow(user) {
 
     return $newUserRow;
 }
-
-
-$.get("/api/recruiterAgencies", function(data) {
-    console.log('Begin displaying all recruiters');
-    console.log(data);
-});
