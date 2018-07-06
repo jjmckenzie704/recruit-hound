@@ -10,23 +10,19 @@ module.exports = function(app, passport) {
         successRedirect: '/dashboard', 
         failureRedirect: '/signup',
         failureFlash: true
-        }), function(req,res){
-            console.log(req.flash);
-    });
+    }))
 
     app.get('/signin', function(req, res) {
-        res.render('signin');
+        res.render('signin', {
+            statusMessage: req.flash('statusMessage')
+        });
     });
 
     app.post('/signin', passport.authenticate('local-signin',  { 
         successRedirect: '/dashboard',
-        failureRedirect: '/fail',
-        successFlash: 'Welcome!'
-    }), function (req, res){ 
-            console.log(req.flash);
-    }
-
-);
+        failureRedirect: '/signin',
+        failureFlash: true
+    }));
 
     app.get('/dashboard', isLoggedIn, function(req, res) {
         console.log(req)
@@ -50,7 +46,9 @@ module.exports = function(app, passport) {
     });
 
     app.get('/fail', function(req, res) {
-        res.render('fail');
+        res.render('fail', {
+            statusMessage: req.flash('statusMessage')
+        });
     });
 
     app.get('/logout', function(req, res) {

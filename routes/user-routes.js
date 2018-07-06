@@ -23,8 +23,7 @@ module.exports = function(app) {
       res.json(results)
     })
   });
-
-  
+ 
 
   // Get route for retrieving a single piece of data
   app.get("/api/posts/:id", function(req, res) {
