@@ -61,7 +61,7 @@ body {
 
 #create-profile-button:active {
   box-shadow: 2px 2px 2px #777;
-  border-bottom: 4px solid orangered;
+  border-bottom: 1px solid orangered;
   transform: translateY(3px);
   left: 50%;
   /* -webkit-transform: translate(-50%, -50%);
@@ -80,10 +80,12 @@ a {
 }
 
 a:link {
+  color: orangered;
   text-decoration: none;
 }
 
 a:visited {
+  color: #00A0AE;
   text-decoration: none;
 }
 
@@ -144,7 +146,62 @@ body {
   color: #00A0AE;
 }
 
+.navbar-brand {
+  font-family: sans-serif;
+}
 
+.nav-item {
+  outline: none;
+}
+
+.nav-item:focus, .nav-item:active, a:focus, a:active {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+}
+
+#logo-header {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  padding: 5px;
+  border: 2px solid rgb(253, 130, 85);
+  margin-right: 5px;
+}
+
+.main-menu-links, .login-link {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  font-family: Segoe UI Symbol;
+}
+
+.main-menu-links:hover {
+  color: orangered;
+  text-decoration: none;
+}
+
+.login-link {
+  color: orangered;
+  padding: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 2px solid rgb(253, 130, 85);
+}
+
+.login-link:hover {
+  text-decoration: none;
+  color: white;
+  background: rgb(253, 130, 85);
+}
+
+#log-in-header {
+  right: 5%;
+  color: orangered;
+  padding: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 2px solid rgb(253, 130, 85);
+}
 
 
 
@@ -157,19 +214,15 @@ body {
   height: 40%;
 }
 
-.flex-item {
-  text-align: center;
-}
-
 #company-name {
-  font-size: 80px;
+  font-size: 72px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   margin: 0 0 -29px 0;
 }
 
 #slogan {
-  font-size: 39px;
+  font-size: 55px;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -202,7 +255,78 @@ body {
   width: 100%;
   text-align: center;
 }
+/* 
+.ludwig {
+  position: relative;
+  padding-left: 1em;
+  border-left: 0.2em solid rgba(253, 130, 85, 0.5);
+  font-family: 'Roboto', serif;
+  font-weight: 100;
+}
+.ludwig:before, .ludwig:after {
+  content: '\201C';
+  font-family: 'Sanchez';
+  color: rgba(253, 130, 85, 0.5);
+}
+.ludwig:after {
+  content: '\201D';
+} */
 
+.ludwig {
+  display: block;
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: #eee;
+  padding: 1.5em 0 0.5em;
+  margin: 1.5em 0;
+  position: relative;
+}
+
+.ludwig2:before {
+  content: '\201C';
+  position: absolute;
+  top: 0em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 3rem;
+  height: 2rem;
+  font: 6em/1.08em 'PT Sans', sans-serif;
+  color: white;
+  text-align: center;
+  transition: color 0.5s linear
+}
+.ludwig2:after {
+  content: "\2013 \2003" attr(cite);
+  display: block;
+  text-align: right;
+  font-size: 0.875em;
+  color: white;
+  transition: color 0.5s linear
+}
+
+.ludwig-scroll:before {
+  content: '\201C';
+  position: absolute;
+  top: 0em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 3rem;
+  height: 2rem;
+  font: 6em/1.08em 'PT Sans', sans-serif;
+  color: orange;
+  text-align: center;
+  transition: color 0.5s linear
+}
+.ludwig-scroll:after {
+  content: "\2013 \2003" attr(cite);
+  display: block;
+  text-align: right;
+  font-size: 0.875em;
+  color: orange;
+  transition: color 0.5s linear
+}
 
 .sectionOne {
   position: relative;
@@ -227,10 +351,19 @@ element.style {
   box-shadow: 3px 3px 2px rgb(253, 130, 85);
 }
 
-.profile-pics {
+.picture-text {
+  width: 100%;
   max-width: 200px;
+  margin: auto;
+}
+
+.profile-pics {
+  width: 100%;
+  max-width: 300px;
   height: auto;
   border-radius: 25%;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .parallax-2 {
@@ -299,8 +432,6 @@ element.style {
   border-bottom: 3px solid orange;
   left: 50%;
   width: 225px;
-  margin-bottom: 10px;
-
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
@@ -313,11 +444,12 @@ element.style {
 }
 
 .what-we-do-message1 {
+  
   position: relative;
   font-size: 14px;
   left: 50%;
   max-width: 400px;
-  top: 56px;
+  top: 90px;
   opacity: 0;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -335,7 +467,7 @@ element.style {
   font-size: 14px;
   left: 50%;
   max-width: 400px;
-  top: 56px;
+  top: 75px;
   opacity: 1;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -425,6 +557,14 @@ element.style {
   }
   .loadingPage-Logo {
     width: 150px;
+  }
+
+  .picture-text {
+    max-width: 200px;
+  }
+
+  .profile-pics {
+    max-width: 200px;
   }
 
   .tie-location {
@@ -518,7 +658,7 @@ element.style {
   }
 
   .what-we-do-message2 {
-    font-size: 12px;
+    font-size: 14px;
     top: 90px;
   }
 
@@ -644,27 +784,134 @@ element.style {
 
 .btn-primary.disabled, .btn-primary:disabled, .btn-primary, .btn-primary:hover, .btn-primary.focus, .btn-primary:focus {
   color: #fff;
-  max-width: 479px;
   background-color: rgb(253, 130, 85);
   border-color: rgb(253, 130, 85);
 }
 
-
-#recruitercontact, #jobseekercontact {
-  width: 49%;
-}
-
 /* END FOOTER CSS */
 
+/* 
+html, body {
 
-@media screen and (max-width:600px) {
-  #company-name {
-    font-size: 12vw;
-    margin: 0 0 -15px 0;
-  }
-
-  #slogan {
-    font-size: 8vw;
-  }
 
 }
+form {
+
+} */
+
+
+
+
+/* 
+.ptext .border {
+  background-color: rgb(17, 17, 17);
+  color: #fff;
+  padding: 20px;
+}
+
+.ptext {
+  text-align: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.section {
+  text-align: center;
+  padding: 50px 80px;
+  background-color: #f4f4f4;
+  color: #666;
+}
+
+
+
+/* 
+.parallax-1 {
+  background-image: url("../images/background2.jpg"); 
+  height: 75vh;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: block;
+}
+
+.parallax-2 {
+  background-image: url("../images/background2.jpg"); 
+  height: 75vh;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: block;
+} */
+
+
+/* 
+.ld-page {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: #fff;
+} */
+
+
+/* BEGIN HEADER CSS */
+/* .fix-search-blue {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(255, 255, 255)) ;
+  height: 100px;  
+  -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  position: fixed;
+  z-index: 1030;
+  width: 100%;
+}
+
+.fix-search-red {
+  background-color: rgb(255, 255, 255);
+  border-bottom: 2px solid black;
+  height: 50px;
+  -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  transition: background-color 0.5s ease-out, height 0.5s ease-out;
+  position: fixed;
+  z-index: 1030;
+  width: 100%;
+}
+ END HEADER CSS 
+
+
+
+
+
+
+BEGIN FOOTER CSS 
+
+.hdr-links {
+  color: orangered;
+}
+
+.footer-font {
+  color: yellow;
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: orangered;
+} */
