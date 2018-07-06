@@ -5,12 +5,22 @@ body, html {
     justify-content: center;
 }
 
+#signupbody {
+    padding-top: 75px!important;
+}
+
+.statusmessage {
+    text-align: center;
+    font-style: italic;
+    color: red;
+}
+
 .profile-content {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    height: auto;
     max-width: 1000px;
 }
 
@@ -162,7 +172,5 @@ h2 {
 
 /*Media queries options*/
 @media screen and (max-width:768px) {
-    #signupbody {
-        padding-top: 225px!important;
-    }
+
 }

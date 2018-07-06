@@ -1,12 +1,17 @@
 module.exports = function(app, passport) {
      app.get('/signup', function(req, res) {
-        res.render('signup');
+        res.render('signup', {
+            statusMessage: req.flash('statusMessage')
+        });
     });
 
     app.post('/signup', passport.authenticate('local-signup', {
-        successRedirect: '/dashboard',
-        failureRedirect: '/signup'
-    }));
+        successRedirect: '/dashboard', 
+        failureRedirect: '/signup',
+        failureFlash: true
+        }), function(req,res){
+            console.log(req.flash);
+    });
 
     app.get('/signin', function(req, res) {
         res.render('signin');
@@ -18,7 +23,9 @@ module.exports = function(app, passport) {
     }));
 
     app.get('/dashboard', isLoggedIn, function(req, res) {
-        res.render('dashboard');
+        res.render('dashboard', {
+            statusMessage: req.flash('statusMessage')
+        });
     });
 
     app.get('/fail', function(req, res) {

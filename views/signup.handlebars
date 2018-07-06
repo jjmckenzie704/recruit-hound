@@ -47,34 +47,38 @@
     <div class="profile-form">
         <form id="usersignup" name="signup" method="post" action="signup">
             <h2>CREATE A PROFILE</h2>
+            {{#if statusMessage}}
+                <h5 class="statusmessage">Error: {{statusMessage}}</h5>
+            {{/if}}
+                <h5 class="statusmessage"></h5>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <input type="email" class="form-control" id="newemail" placeholder="Email" name="newemail">
+                    <input type="email" class="form-control" id="newemail" placeholder="Email" name="newemail" required>
                 </div>
                 <div class="form-group col-md-6">
-                    <input type="password" class="form-control" id="newpassword" placeholder="Password" name="newpassword">
+                    <input type="password" class="form-control" id="newpassword" placeholder="Password" name="newpassword" required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="newfirstname" placeholder="Jane" name="newfirstname">
+                    <input type="text" class="form-control" id="newfirstname" placeholder="Jane" name="newfirstname" required>
                 </div>
                 <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="newlastname" placeholder="Smith" name="newlastname">
+                    <input type="text" class="form-control" id="newlastname" placeholder="Smith" name="newlastname" required>
                 </div>
             </div>
             <div class="form-group">    
-                <input type="text" class="form-control" id="newaddress1" placeholder="1234 Main St" name="newaddress1">
+                <input type="text" class="form-control" id="newaddress1" placeholder="1234 Main St" name="newaddress1" required>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="newaddress2" placeholder="Apartment, studio, or floor" name="newaddress2">
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="newcity" name="newcity" placeholder="City">
+                    <input type="text" class="form-control" id="newcity" name="newcity" placeholder="City" required>
                 </div>
                 <div class="form-group col-md-4">
-                    <select id="newstate" class="form-control" name="newstate">
+                    <select id="newstate" class="form-control" name="newstate" required>
                         <option selected disabled>Choose...</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
@@ -130,7 +134,7 @@
                     </select>
                 </div>
                 <div class="form-group col-md-2">
-                    <input type="text" class="form-control" id="newzip" name="newzip" placeholder="Zip">
+                    <input type="text" class="form-control" id="newzip" name="newzip" placeholder="Zip" required>
                 </div>
                 <div class="custom-file">
                     <input type="file" class="custom-file-input" id="newresume" name="newresume">
