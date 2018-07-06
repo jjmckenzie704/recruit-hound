@@ -24,8 +24,4 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/recruitersearch.html"))
   })
 
-  app.get('/dashboard', function(req, res){
-    res.render('dashboard');
-  })
-
 };
