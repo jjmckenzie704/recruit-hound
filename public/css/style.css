@@ -2,18 +2,53 @@ body {
   background: white;
 }
 
+#what-we-do {
+  flex-direction: column;
+  text-align: center;
+  border-top: 1px solid lightgray;
+  padding-top: 45px;
+}
+
+#what-we-do-title, #what-we-do-message {
+  align-self: center;
+  margin-bottom: 15px;
+}
+
+.horizontal-orange {
+  border-bottom: 2px solid rgb(253, 130, 85);
+  width: 100%;
+  animation-name: horizontal-orange;
+  animation-duration: 2s;
+  margin: 0 auto;
+}
+
+#what-we-do-message {
+  max-width: 760px;
+}
+
+@keyframes horizontal-orange {
+  from {width: 0px}
+  to {width: 196px;}
+}
+
+
+#stepone i, #steptwo i, #stepthree i {
+  font-size: 90px;
+  padding-bottom: 15px;
+  color: rgb(253, 130, 85);
+}
+
 #contentWrapper {
   width: 90%;
   margin: 0 auto;
   text-align: center;
 }
+
 #content {
   text-align: center;
 }
 
 #create-profile-button {
-  
-  
   text-align: center;
   padding: 10px;
   display: block;
@@ -111,10 +146,6 @@ a:active {
   line-height: 1.5;
 }
 
-body {
-  font-family: 'Alegreya Sans SC', sans-serif;
-}
-
 .about {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 15px;
@@ -175,13 +206,10 @@ body {
 
 
 .parallax-1 {
-  background-image: url("../images/background4.jpg"); 
-  height: 1000px;
-  top: 160px;
+  background-image: url(../images/background4.jpg);
+  height: 750px;
+  margin-bottom: -240px;
   background-position: center;
-  background-repeat: no-repeat;
-  display: block;
-  z-index: -25;
 }
 
 
@@ -205,13 +233,21 @@ body {
 
 
 .sectionOne {
-  position: relative;
-  top: -400px;
+  display: flex;
   border-radius: 0% 0% 0% 0%;
-  background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(154, 193, 196));
   padding: 50px 80px;
   z-index: 25;
   border-top: 1px solid rgb(154, 193, 196);
+  background: #F9F9F9;
+  height: 130px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  border-bottom: 1px solid lightgray;
+}
+
+.logo {
+  align-self: flex-end;
 }
 
 .sectionTwo {
@@ -270,7 +306,7 @@ element.style {
   padding-bottom: 20px;
 }
 
-#what-we-do {
+/* #what-we-do {
   letter-spacing: 1.9px;
   font-weight: bold;
   font-size: 40px;
@@ -346,8 +382,8 @@ element.style {
   -moz-transition: opacity 0.5s linear;
   -o-transition: opacity 0.5s linear;
   transition: opacity 0.5s linear;
-}
-
+} */
+/* 
 .logoLocation {
   position: relative;
   width: 300px;
@@ -361,7 +397,7 @@ element.style {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 1000;
-}
+} */
 
 
 
@@ -419,7 +455,7 @@ element.style {
 }
 
 @media only screen and (max-width: 700px) {
-  .logoLocation {
+  /* .logoLocation {
     width: 150px;
     top: -120px
   }
@@ -461,8 +497,8 @@ element.style {
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
-  }
-  #RH  {
+  } */
+  /* #RH  {
     font-size: 4vh;
   }
 
@@ -507,12 +543,6 @@ element.style {
     top: -220px;
   }
 
-  #what-we-do {
-    letter-spacing: 1.9px;
-    font-weight: bold;
-    font-size: 25px;
-  }
-
   .what-we-do-bottom-border2 {
     width: 145px;
   }
@@ -520,7 +550,7 @@ element.style {
   .what-we-do-message2 {
     font-size: 12px;
     top: 90px;
-  }
+  } */
 
 } /* <-----MEDIA QUERY END --- */
 
@@ -574,6 +604,62 @@ element.style {
   transform: scale(.91);
 } */
 
+.ludwig {
+  display: block;
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: #eee;
+  padding: 1.5em 0 0.5em;
+  margin: 1.5em 0;
+  position: relative;
+}
+
+.ludwig2:before {
+  content: '\201C';
+  position: absolute;
+  top: 0em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 3rem;
+  height: 2rem;
+  font: 6em/1.08em 'PT Sans', sans-serif;
+  color: white;
+  text-align: center;
+  transition: color 0.5s linear
+}
+.ludwig2:after {
+  content: "\2013 \2003" attr(cite);
+  display: block;
+  text-align: right;
+  font-size: 0.875em;
+  color: white;
+  transition: color 0.5s linear
+}
+
+.ludwig-scroll:before {
+  content: '\201C';
+  position: absolute;
+  top: 0em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 3rem;
+  height: 2rem;
+  font: 6em/1.08em 'PT Sans', sans-serif;
+  color: orange;
+  text-align: center;
+  transition: color 0.5s linear
+}
+.ludwig-scroll:after {
+  content: "\2013 \2003" attr(cite);
+  display: block;
+  text-align: right;
+  font-size: 0.875em;
+  color: orange;
+  transition: color 0.5s linear
+}
+
 @keyframes popInImg{
   0%{
     transform: skewY(5deg) scaleX(.89) scaleY(.89);
@@ -620,8 +706,9 @@ element.style {
 }
 
 .footer {
-    height: 10vh;
-    background: white;
+  min-height: 55px;
+  background: white;
+  padding: 30px;
 }
 
 #social {

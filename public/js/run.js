@@ -44,7 +44,7 @@ $(function() {
     $(window).scroll(function() {
         let scroll = $(window).scrollTop();
 
-        if (scroll >= 100) {
+        if (scroll >= 10) {
             console.log(" if - red")
             wrap.removeClass('fix-search-blue').addClass("fix-search-red");
         } else {
@@ -54,6 +54,7 @@ $(function() {
         if (scroll >= 350) {
             console.log(" if - gone")
             orangeBorder.removeClass('what-we-do-bottom-border1').addClass("what-we-do-bottom-border2");
+            $('#orange-line').addClass('horizontal-orange');
         } else {
             console.log(" else - orange")
             orangeBorder.removeClass("what-we-do-bottom-border2").addClass('what-we-do-bottom-border1');
@@ -75,29 +76,29 @@ $(function() {
     });
 });
 
+// This is how to fire a get on all users
+// $.get("/api/users", function(data) {
+//     console.log('Begin displaying all users');
+//     console.log(data);
+//     for (key in data) {
+//         createNewRow(data[key]);
+//     }
+//     $('.content').html(createNewRow(data[key]));
+//   });
 
-$.get("/api/users", function(data) {
-    console.log('Begin displaying all users');
-    console.log(data);
-    for (key in data) {
-        createNewRow(data[key]);
-    }
-    $('.content').html(createNewRow(data[key]));
-});
 
+// function createNewRow(user) {
+//     console.log("success");
+//     let $newUserRow = $(
+//         [
+//             '<p class="user-block">',
+//             'First Name: ' + user.firstName + '<br />',
+//             'Last Name: ' + user.lastName + '<br />',
+//             'Email: ' + user.email + '<br />',
+//             'Skill: ' + user.skill + '<br />',
+//             '</p>'
+//         ].join('')
+//     );
 
-function createNewRow(user) {
-    console.log("success");
-    let $newUserRow = $(
-        [
-            '<p class="user-block">',
-            'First Name: ' + user.firstName + '<br />',
-            'Last Name: ' + user.lastName + '<br />',
-            'Email: ' + user.email + '<br />',
-            'Skill: ' + user.skill + '<br />',
-            '</p>'
-        ].join('')
-    );
-
-    return $newUserRow;
-}
+//     return $newUserRow;
+// }

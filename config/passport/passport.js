@@ -114,12 +114,12 @@
     User.findOne({ where : { email: email}}).then(function (user) {
       
       if (!user) {
-        return done(null, false, { message: 'Email does not exist' });
+        return done(null, false, req.flash('statusMessage', 'Email does not exist!'));
       }
 
       if (!isValidPassword(user.password,password)) {
 
-        return done(null, false, { message: 'Incorrect password.' });
+        return done(null, false, req.flash('statusMessage', 'Password is incorrect'));
 
       }
 
@@ -131,7 +131,7 @@
 
       console.log("Error:",err);
 
-      return done(null, false, { message: 'Something went wrong with your Signin' });
+      return done(null, false, req.flash('statusMessage', 'Something went wrong!'));
 
 
     });

@@ -45,8 +45,10 @@
                 <div class="frontbox">
                     <div class="login">
                         <h2>SIGN IN</h2>
+                        {{#if statusMessage}}
+                            <h5 class="statusmessage">Error: {{statusMessage}}</h5>
+                        {{/if}}
                         <form id="signin" name="signin" method="post" action="signin">
-
                             <div class="inputbox">
                                 <input class="form-control" type="text" name="email" placeholder="EMAIL">
                                 <input class="form-control" type="password" name="password" placeholder="PASSWORD">
