@@ -1,4 +1,8 @@
-$(document).ready(function() {
+$(document).ready(function(result) {
+    
+    console.log(result.email)
+
+    
     getRecruiters();
     
     //Pull all recruiters//
