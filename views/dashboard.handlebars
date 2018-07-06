@@ -15,16 +15,6 @@
     <link rel="stylesheet" type="text/css" href="./css/header.css" />
 	<link rel="stylesheet" type="text/css" href="./css/dashboard.css"/>
 
-
-	<!-- jQuery -->
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
-	<!-- Local scripting -->
-	<script src="./js/contact.js"></script>
-	<script src="./js/recruiter.js"></script>
 </head>
 <body class="dashboard-body">
 <header id="dashboard-header">   <!--  Nav bar -->
@@ -57,32 +47,32 @@
 					<h2 id="editheader">Edit Profile</h2>
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<input type="email" class="form-control" id="editemail" placeholder="Email" name="newemail" value={{email}}>
+							<input type="email" class="form-control" id="editemail" placeholder="Email" name="newemail" value="{{email}}">
 						</div>
 						<div class="form-group col-md-6">
-                            <input type="password" class="form-control" id="editpassword" placeholder="Password" name="newpassword" value={{password}}>
+                            <input type="password" class="form-control" id="editpassword" placeholder="Password" name="newpassword">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <input type="text" class="form-control" id="editfirstname" placeholder="Jane" name="newfirstname" value={{firstname}}>
+                            <input type="text" class="form-control" id="editfirstname" placeholder="Jane" name="newfirstname" value="{{firstname}}">
                         </div>
                         <div class="form-group col-md-6">
-                            <input type="text" class="form-control" id="editlastname" placeholder="Smith" name="newlastname" value={{lastname}}>
+                            <input type="text" class="form-control" id="editlastname" placeholder="Smith" name="newlastname" value="{{lastname}}">
                         </div>
                     </div>
                     <div class="form-group">    
-                        <input type="text" class="form-control" id="editaddress1" placeholder="1234 Main St" name="newaddress1" value={{address1}}>
+                        <input type="text" class="form-control" id="editaddress1" placeholder="1234 Main St" name="newaddress1" value="{{address1}}">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="editaddress2" placeholder="Apartment, studio, or floor" name="newaddress2" value={{address2}}>
+                        <input type="text" class="form-control" id="editaddress2" placeholder="Apartment, studio, or floor" name="newaddress2" value="{{address2}}">
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <input type="text" class="form-control" id="editcity" name="newcity" placeholder="City" value={{city}}>
+                            <input type="text" class="form-control" id="editcity" name="newcity" placeholder="City" value="{{city}}">
                         </div>
                         <div class="form-group col-md-4">
-                            <select id="editstate" class="form-control" name="newstate" value={{state}}>
+                            <select id="editstate" class="form-control" name="newstate">
 								<option disabled>Choose...</option>
 								<option value="AL">Alabama</option>
 								<option value="AK">Alaska</option>
@@ -251,5 +241,20 @@
 </div> 
 <!-- End contact us modal -->
 
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<!-- Local scripting -->
+<script>
+	let state = "{{state}}";
+	let userskills = "{{skills}}";
+</script>
+<script src="./js/dashboard.js"></script>
+<script src="./js/contact.js"></script>
+<script src="./js/recruiter.js"></script>
 </body>
 </html>
