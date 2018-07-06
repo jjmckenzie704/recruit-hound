@@ -1,4 +1,5 @@
 $(document).ready(function() {
+ 
 
 let skills = ['C++', 'C#', 'Java', 'JavaScript', 'Perl', 'PHP', 'Python', 'Bootstrap', 'Handlebars', 'React', 'NodeJS', 'Angular', 'CSS', 'HTML'];
 
@@ -18,7 +19,12 @@ $('.skillbutton').click(function() {
 });
 
 $(".submitprofile").click(function() {   // Button to submit the create a profile form
-    console.log("Submit has been fired");
+    console.log("Create My Profile has been fired");
+
+    if ($('#newstate option:selected').text() == 'Choose...') {
+        $('.statusmessage').html('Please fill in all the required fields!');
+        return false;
+    }
     
     let skillsBlock = [];
 
