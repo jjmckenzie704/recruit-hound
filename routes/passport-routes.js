@@ -23,9 +23,14 @@ module.exports = function(app, passport) {
     }));
 
     app.get('/dashboard', isLoggedIn, function(req, res) {
-        res.render('dashboard', {
-            statusMessage: req.flash('statusMessage')
-        });
+        db.user.findOne({
+            where: {
+                email: req.params.email
+            }
+        }).then(function(result) {res.render('dashboard', {
+            statusMessage: req.flash('statusMessage'), 
+            result: result
+        })})
     });
 
     app.get('/fail', function(req, res) {
