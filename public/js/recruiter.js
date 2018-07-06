@@ -25,12 +25,12 @@ $(document).ready(function() {
         //     $(".recruiterHeader").append(newTr);
         //   };
 //======================================================//
-    $(".btn").on("click", function() {
+    $("#search-button").on("click", function() {
         event.preventDefault()
 
 
         //Create variable for grabbing the value
-        var newSearch = $(".search").val().trim();
+        var newSearch = $("#search-input").val().trim();
         console.log(newSearch)
 
         //Check to see if a valid city
@@ -62,6 +62,7 @@ $(document).ready(function() {
     function createRow(recruiterData) {
 
         //========For Accordion ======//
+        
         var newCard = $("<div >")
         newCard.addClass("card");
         var newCardHeader = $("<div>");
