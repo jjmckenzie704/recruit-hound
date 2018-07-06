@@ -2,9 +2,12 @@ body {
   background-color: #f9f9f9;
 }
 
+.dashboard-body {
+    padding-top: 75px;
+}
+
 /*Header styling*/
 #agency-search {
-    margin-top: 200px;
     background-color: white;
     padding: 15px;
     margin-bottom: 5px;

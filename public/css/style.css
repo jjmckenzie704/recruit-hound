@@ -656,128 +656,15 @@ element.style {
 
 /* END FOOTER CSS */
 
-/* 
-html, body {
 
+@media screen and (max-width:600px) {
+  #company-name {
+    font-size: 12vw;
+    margin: 0 0 -15px 0;
+  }
+
+  #slogan {
+    font-size: 8vw;
+  }
 
 }
-form {
-
-} */
-
-
-
-
-/* 
-.ptext .border {
-  background-color: rgb(17, 17, 17);
-  color: #fff;
-  padding: 20px;
-}
-
-.ptext {
-  text-align: center;
-  color: #000;
-  font-size: 27px;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-  position: absolute;
-  top: 50%;
-  width: 100%;
-}
-
-.section {
-  text-align: center;
-  padding: 50px 80px;
-  background-color: #f4f4f4;
-  color: #666;
-}
-
-
-
-/* 
-.parallax-1 {
-  background-image: url("../images/background2.jpg"); 
-  height: 75vh;
-  position: relative;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  display: block;
-}
-
-.parallax-2 {
-  background-image: url("../images/background2.jpg"); 
-  height: 75vh;
-  position: relative;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  display: block;
-} */
-
-
-/* 
-.ld-page {
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: #fff;
-} */
-
-
-/* BEGIN HEADER CSS */
-/* .fix-search-blue {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(255, 255, 255)) ;
-  height: 100px;  
-  -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
-  -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
-  -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
-  transition: background-color 0.5s ease-out, height 0.5s ease-out;
-  position: fixed;
-  z-index: 1030;
-  width: 100%;
-}
-
-.fix-search-red {
-  background-color: rgb(255, 255, 255);
-  border-bottom: 2px solid black;
-  height: 50px;
-  -webkit-transition: background-color 0.5s ease-out, height 0.5s ease-out;
-  -moz-transition: background-color 0.5s ease-out, height 0.5s ease-out;
-  -o-transition: background-color 0.5s ease-out, height 0.5s ease-out;
-  transition: background-color 0.5s ease-out, height 0.5s ease-out;
-  position: fixed;
-  z-index: 1030;
-  width: 100%;
-}
- END HEADER CSS 
-
-
-
-
-
-
-BEGIN FOOTER CSS 
-
-.hdr-links {
-  color: orangered;
-}
-
-.footer-font {
-  color: yellow;
-}
-
-
-.footer {
-  position: fixed;
-  bottom: 0px;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  background-color: orangered;
-} */
