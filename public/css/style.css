@@ -255,7 +255,78 @@ body {
   width: 100%;
   text-align: center;
 }
+/* 
+.ludwig {
+  position: relative;
+  padding-left: 1em;
+  border-left: 0.2em solid rgba(253, 130, 85, 0.5);
+  font-family: 'Roboto', serif;
+  font-weight: 100;
+}
+.ludwig:before, .ludwig:after {
+  content: '\201C';
+  font-family: 'Sanchez';
+  color: rgba(253, 130, 85, 0.5);
+}
+.ludwig:after {
+  content: '\201D';
+} */
 
+.ludwig {
+  display: block;
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: #eee;
+  padding: 1.5em 0 0.5em;
+  margin: 1.5em 0;
+  position: relative;
+}
+
+.ludwig2:before {
+  content: '\201C';
+  position: absolute;
+  top: 0em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 3rem;
+  height: 2rem;
+  font: 6em/1.08em 'PT Sans', sans-serif;
+  color: white;
+  text-align: center;
+  transition: color 0.5s linear
+}
+.ludwig2:after {
+  content: "\2013 \2003" attr(cite);
+  display: block;
+  text-align: right;
+  font-size: 0.875em;
+  color: white;
+  transition: color 0.5s linear
+}
+
+.ludwig-scroll:before {
+  content: '\201C';
+  position: absolute;
+  top: 0em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 3rem;
+  height: 2rem;
+  font: 6em/1.08em 'PT Sans', sans-serif;
+  color: orange;
+  text-align: center;
+  transition: color 0.5s linear
+}
+.ludwig-scroll:after {
+  content: "\2013 \2003" attr(cite);
+  display: block;
+  text-align: right;
+  font-size: 0.875em;
+  color: orange;
+  transition: color 0.5s linear
+}
 
 .sectionOne {
   position: relative;

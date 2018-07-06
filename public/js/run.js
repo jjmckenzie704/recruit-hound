@@ -40,6 +40,7 @@ $(function() {
     let wrap = $(".wrap");
     let orangeBorder = $('#border-what');
     let message = $('#what-we-do-message');
+    let ludwig = $('.ludwig')
     $(window).scroll(function() {
         let scroll = $(window).scrollTop();
 
@@ -63,6 +64,13 @@ $(function() {
         } else {
             console.log(" else - orange")
             message.removeClass("what-we-do-message2").addClass('what-we-do-message1');
+        }
+        if (scroll >= 750) {
+            console.log("ludwig-scroll added")
+            ludwig.removeClass('ludwig2').addClass("ludwig-scroll");
+        } else {
+            console.log("ludwig-scroll removed")
+            ludwig.removeClass("ludwig-scroll").addClass('ludwig2');
         }
     });
 });
